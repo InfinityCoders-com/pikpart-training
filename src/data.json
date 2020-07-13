@@ -1,0 +1,107 @@
+{
+  "aboutUs": "Jump2Join is one of the best station for offline mechanics training and to get placed based on certification secured. The core of our mission and vision is innovation: We arechanging the way people think about selecting their profession.  Everyday we help people revive their career and improve their lives.  At Jump2Join, we call our employees “Career Shapers” because everyone here works for the ultimate purpose: To help people to reshape their careers. We make the dreams of our recruiting clients come true by helping them hire the right people for their companies. We know the pain of being unemployed after successful completion of professional courses, thus we train them to get assured job best suited as per their skills.  At Jump2Join, we provide offline training to qualified professionals who are jobless or want to reshape their careers through our training programs.  At Jump2Join, we provide solutions to employers to choose or request best-trained resources available as per industry standards, and professionals of all industries are involved with us to make this happen.",
+
+  "courseContent": {
+    "courseName": "Diploma Course in Two Wheeler Mechanism and Maintenance",
+    "courseImage": "https://live.staticflickr.com/65535/48732780891_8611957ece_b.jpg",
+    "registrationFee": 800,
+    "courseFee": 12000,
+    "semester": {
+      "sem": [
+        {
+          "paper": [
+            {
+              "name": "1: BASIC OF TWO WHEELERS",
+              "courseCode": "20TWMV0101",
+              "credits": {
+                "theory": 3,
+                "practicals": 3,
+                "marks": 100
+              },
+              "description": {
+                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                "Unit I": "Basic Checkup",
+                "Unit II": "Inlet problems",
+                "Unit III": "Starting Problems",
+                "Unit IV": "Engine Assembly",
+                "Unit V": "Clutch Assembly"
+              }
+            },
+            {
+              "name": "2: MAJOR SYSTEMS IN TWO WHEELERS",
+              "courseCode": "16TWMV0102",
+              "credits": {
+                "theory": 3,
+                "practicals": 3,
+                "marks": 100
+              },
+              "description": {
+                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                "Unit I": "Basic Checkup",
+                "Unit II": "Inlet problems",
+                "Unit III": "Starting Problems",
+                "Unit IV": "Engine Assembly",
+                "Unit V": "Clutch Assembly"
+              }
+            },
+            {
+              "name": "3:GENERAL CHECKUP FOR TWO WHEELERS",
+              "courseCode": "16TWMV0103",
+              "credits": {
+                "theory": 3,
+                "practicals": 3,
+                "marks": 100
+              },
+              "description": {
+                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                "Unit I": "Basic Checkup",
+                "Unit II": "Inlet problems",
+                "Unit III": "Starting Problems",
+                "Unit IV": "Engine Assembly",
+                "Unit V": "Clutch Assembly"
+              }
+            },
+            {
+              "name": "4:ASSEMBLIES AND AUTO-ELECTRICAL",
+              "courseCode": "16TWMV0103",
+              "credits": {
+                "theory": 3,
+                "practicals": 3,
+                "marks": 100
+              },
+              "description": {
+                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                "Unit I": "Basic Checkup",
+                "Unit II": "Inlet problems",
+                "Unit III": "Starting Problems",
+                "Unit IV": "Engine Assembly"
+              }
+            }
+          ]
+        },
+        {
+          "paper": [
+            {
+              "name": "6: INDUSTRIAL PLACEMENT FOR HANDS-ON-EXPERIENCE",
+              "courseCode": "16TWMV0103",
+              "credits": {
+                "credit": 30
+              },
+              "marks": 100,
+              "description": {
+                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                "Unit I": "Basic Checkup",
+                "Unit II": "Inlet problems",
+                "Unit III": "Starting Problems",
+                "Unit IV": "Engine Assembly",
+                "Unit V": "Clutch Assembly"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "courses": ["Diploma Course in Two Wheeler Mechanism and Maintenance"],
+  "traningLocations": ["Kashipur"]
+}
