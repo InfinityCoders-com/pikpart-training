@@ -12,7 +12,7 @@ function AboutUs(props: any) {
   const { data } = props
   return (
     <Flex justifyContentCenter alignItemsCenter wrap column>
-      <Span variant="h1" style={{ marginTop: '7vmax', marginBottom: '2vmax' }}>
+      <Span color={`#808184`} variant="h1" style={{ marginTop: '7vmax', marginBottom: '2vmax' }}>
         About Us
       </Span>
       <Flex width={[0.95, 0.7]}>

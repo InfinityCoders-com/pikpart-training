@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Span, Input, Button } from '@icstark/ui'
 import { MyInput } from '../component'
+import { FaRegEnvelope, FaMobileAlt, FaWhatsapp, FaMapMarked, FaMapMarkedAlt } from 'react-icons/fa'
 
 const style = {
   color: '#333',
@@ -8,20 +9,35 @@ const style = {
   margin: '0.8vmax 0 0'
 }
 
-export const LabelValue = ({ label, value }: any) => {
+export const LabelValue = ({ label, value, icon }: any) => {
   return (
-    <Flex alignItemsFlexStart style={style}>
-      <Span
-        variant="default"
-        fontSize={18}
-        color={`rgba(0,0,0,0.65)`}
-        style={{ width: 100, fontWeight: 600 }}
-      >
-        {label}:
-      </Span>
-      <Span style={{ marginLeft: '1vmax' }} color={`#676767`} fontSize={18}>
-        {value || null}
-      </Span>
+    <Flex style={style} width={1}>
+      <Flex>
+        <Span
+          variant="default"
+          fontSize={18}
+          color={`rgba(0,0,0,0.65)`}
+          style={{ width: 120, fontWeight: 600 }}
+        >
+          {icon || label + `:`}
+        </Span>
+      </Flex>
+      <Flex column>
+        {label === 'Address'
+          ? value.split(',').map((item: any, i: any) => {
+              return (
+                <Span color={`#676767`} fontSize={18} key={`${i}`}>
+                  {item}
+                  {i < value.split(',').length - 1 && ','}
+                </Span>
+              )
+            })
+          : (
+              <Span color={`#676767`} fontSize={18}>
+                {value}
+              </Span>
+            ) || null}
+      </Flex>
     </Flex>
   )
 }
@@ -83,6 +99,7 @@ function ContactRegister(props: any) {
       <Flex wrap justifyContentCenter>
         <Flex width={[1, 0.45]} style={{ padding: 10 }} alignItemsCenter column>
           <Span
+            color={`#808184`}
             variant="h1"
             style={{ marginTop: '7vmax', marginBottom: '2vmax', alignSelf: 'center' }}
           >
@@ -91,16 +108,28 @@ function ContactRegister(props: any) {
           <Flex
             width={[0.7]}
             justifyContentCenter
-            // alignItemsCenter
-            style={{ margin: '70px 10px', padding: 10 }}
+            style={{ margin: '45px 10px', padding: '6px 10px' }}
             column
           >
-            <LabelValue label="Email" value="jump2join@gmail.com" />
-            <LabelValue label="WhatsApp" value="+91-786060980" />
-            <LabelValue label="Phone" value="+91-9027914008" />
+            <LabelValue
+              label="Email"
+              value="jump2join@gmail.com"
+              icon={<FaRegEnvelope color={`#808184`} size={35} />}
+            />
+            <LabelValue
+              label="WhatsApp"
+              value="+91-786060980"
+              icon={<FaWhatsapp color={`#808184`} size={35} />}
+            />
+            <LabelValue
+              label="Phone"
+              value="+91-9027914008"
+              icon={<FaMobileAlt color={`#808184`} size={35} />}
+            />
             <LabelValue
               label="Address"
-              value="Jump2Join Training Center, Aliganj Road, Tanda Ujjain, Kashipur - 244713"
+              icon={<FaMapMarkedAlt color={`#808184`} size={35} />}
+              value="Jump2Join Training Center, Aliganj Road Tanda Ujjain, Kashipur - 244713"
             />
           </Flex>
           <Flex width={[1, 0.8]} column>
@@ -143,7 +172,7 @@ function ContactRegister(props: any) {
               variant="m"
               placeholder="Message"
               name="msg"
-              rows={15}
+              rows={9}
               onChange={onChangeContact}
               inputStyle={inputStyleContact.msg}
               onFocus={changePlacholderContact}
@@ -156,6 +185,7 @@ function ContactRegister(props: any) {
         </Flex>
         <Flex width={[1, 0.45]} style={{ padding: 10 }} alignItemsCenter column>
           <Span
+            color={`#808184`}
             variant="h1"
             style={{ marginTop: '7vmax', marginBottom: '2vmax', alignSelf: 'center' }}
           >
@@ -250,7 +280,7 @@ function ContactRegister(props: any) {
               variant="m"
               placeholder="Message"
               name="msg"
-              rows={12}
+              rows={8}
               onChange={onChangeRegister}
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
