@@ -6,9 +6,8 @@ const BFlex = styled(Flex)`
   width: 100%;
   height: auto;
   position: relative;
-  max-height: 400px;
   @media screen and (max-width: 500px) {
-    max-height: 150px;
+    max-height: 250px;
   }
 `
 const BIFlex = styled(Flex)`

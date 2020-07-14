@@ -73,6 +73,9 @@ code {
   .myCard {
     width: 250px !important;
   }
+  .card-head {
+    width: 250px !important;
+  }
 }
 
 .myCard .cardCredits {

@@ -1,26 +1,41 @@
 import React from 'react'
-import { Flex, Span, Input, Button } from '@icstark/ui'
+import { Flex, Span, Input, Button, styled } from '@icstark/ui'
 import { MyInput } from '../component'
-import { FaRegEnvelope, FaMobileAlt, FaWhatsapp, FaMapMarked, FaMapMarkedAlt } from 'react-icons/fa'
+import { FaRegEnvelope, FaMobileAlt, FaWhatsapp, FaMapMarkedAlt } from 'react-icons/fa'
 
 const style = {
   color: '#333',
   fontWeight: 400,
-  margin: '0.8vmax 0 0'
+  marginBottom: '11px'
 }
+
+const Phone = styled(FaMobileAlt)`
+  color: ${(props: any) => props.theme.colors.primary};
+`
+const Email = styled(FaRegEnvelope)`
+  color: ${(props: any) => props.theme.colors.primary};
+`
+const WhatsApp = styled(FaWhatsapp)`
+  color: ${(props: any) => props.theme.colors.primary};
+`
+const Map = styled(FaMapMarkedAlt)`
+  color: ${(props: any) => props.theme.colors.primary};
+`
 
 export const LabelValue = ({ label, value, icon }: any) => {
   return (
-    <Flex style={style} width={1}>
-      <Flex>
-        <Span
-          variant="default"
-          fontSize={18}
-          color={`rgba(0,0,0,0.65)`}
-          style={{ width: 120, fontWeight: 600 }}
-        >
-          {icon || label + `:`}
-        </Span>
+    <Flex style={style} alignItemsCenter>
+      <Flex style={{ width: 50 }}>
+        {icon || (
+          <Span
+            variant="default"
+            fontSize={18}
+            color={`rgba(0,0,0,0.65)`}
+            style={{ fontWeight: 600 }}
+          >
+            {label + `:`}
+          </Span>
+        )}
       </Flex>
       <Flex column>
         {label === 'Address'
@@ -95,46 +110,36 @@ function ContactRegister(props: any) {
   }
 
   return (
-    <Flex justifyContentCenter column>
+    <Flex
+      justifyContentCenter
+      column
+      style={{
+        background: `linear-gradient(315deg, #baecff 10%, #ffffff 60%)`
+      }}
+    >
       <Flex wrap justifyContentCenter>
-        <Flex width={[1, 0.45]} style={{ padding: 10 }} alignItemsCenter column>
+        <Flex width={[1, 0.5]} style={{ padding: 10 }} alignItemsCenter column>
           <Span
-            color={`#808184`}
-            variant="h1"
+            variant="h1 primary"
             style={{ marginTop: '7vmax', marginBottom: '2vmax', alignSelf: 'center' }}
           >
             Contact Us
           </Span>
-          <Flex
-            width={[0.7]}
-            justifyContentCenter
-            style={{ margin: '45px 10px', padding: '6px 10px' }}
-            column
-          >
-            <LabelValue
-              label="Email"
-              value="jump2join@gmail.com"
-              icon={<FaRegEnvelope color={`#808184`} size={35} />}
-            />
-            <LabelValue
-              label="WhatsApp"
-              value="+91-786060980"
-              icon={<FaWhatsapp color={`#808184`} size={35} />}
-            />
-            <LabelValue
-              label="Phone"
-              value="+91-9027914008"
-              icon={<FaMobileAlt color={`#808184`} size={35} />}
-            />
-            <LabelValue
-              label="Address"
-              icon={<FaMapMarkedAlt color={`#808184`} size={35} />}
-              value="Jump2Join Training Center, Aliganj Road Tanda Ujjain, Kashipur - 244713"
-            />
+          <Flex width={[1, 0.7]} alignItemsCenter column>
+            <Flex width={[0.8, 1]} column>
+              <LabelValue label="Email" value="jump2join@gmail.com" icon={<Email size={35} />} />
+              <LabelValue label="WhatsApp" value="+91-786060980" icon={<WhatsApp size={35} />} />
+              <LabelValue label="Phone" value="+91-9027914008" icon={<Phone size={35} />} />
+              <LabelValue
+                label="Address"
+                icon={<Map size={35} />}
+                value="Jump2Join Training Center, Aliganj Road Tanda Ujjain, Kashipur - 244713"
+              />
+            </Flex>
           </Flex>
           <Flex width={[1, 0.8]} column>
             <MyInput
-              m={2}
+              my={2}
               type="text"
               variant="m"
               placeholder="Name"
@@ -145,7 +150,7 @@ function ContactRegister(props: any) {
               onBlur={onBlurContact}
             />
             <MyInput
-              m={2}
+              my={2}
               type="email"
               variant="m"
               placeholder="Email"
@@ -156,7 +161,7 @@ function ContactRegister(props: any) {
               onBlur={onBlurContact}
             />
             <MyInput
-              m={2}
+              my={2}
               type="number"
               variant="m"
               placeholder="Phone"
@@ -167,26 +172,25 @@ function ContactRegister(props: any) {
               onBlur={onBlurContact}
             />
             <MyInput
-              m={2}
+              my={2}
               type="textarea"
               variant="m"
               placeholder="Message"
               name="msg"
-              rows={9}
+              rows={12}
               onChange={onChangeContact}
               inputStyle={inputStyleContact.msg}
               onFocus={changePlacholderContact}
               onBlur={onBlurContact}
             />
-            <MyInput type="button" variant="m primary" ghost m={2} onClick={onSubmitContact}>
+            <MyInput type="button" variant="m primary" my={2} onClick={onSubmitContact}>
               Contact Us
             </MyInput>
           </Flex>
         </Flex>
-        <Flex width={[1, 0.45]} style={{ padding: 10 }} alignItemsCenter column>
+        <Flex width={[1, 0.5]} style={{ padding: 10 }} alignItemsCenter column>
           <Span
-            color={`#808184`}
-            variant="h1"
+            variant="h1 primary"
             style={{ marginTop: '7vmax', marginBottom: '2vmax', alignSelf: 'center' }}
           >
             Register Now
@@ -194,14 +198,14 @@ function ContactRegister(props: any) {
           <Flex width={[1, 0.8]} column>
             <MyInput
               type="select"
-              m={2}
+              my={2}
               options={props.courses}
               placeholder="Course Name"
               name="courseName"
               onChange={onChangeRegister}
             />
             <MyInput
-              m={2}
+              my={2}
               type="text"
               variant="m"
               placeholder="Name"
@@ -212,7 +216,7 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleRegister.name}
             />
             <MyInput
-              m={2}
+              my={2}
               type="email"
               variant="m"
               placeholder="Email"
@@ -223,7 +227,7 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleRegister.email}
             />
             <MyInput
-              m={2}
+              my={2}
               type="number"
               variant="m"
               placeholder="Phone"
@@ -235,14 +239,14 @@ function ContactRegister(props: any) {
             />
             <MyInput
               type="select"
-              m={2}
+              my={2}
               options={props.traningLocations}
               placeholder="Traning Center"
               name="traningCenter"
               onChange={onChangeRegister}
             />
             <MyInput
-              m={2}
+              my={2}
               type="text"
               variant="m"
               placeholder="Highest Qualification"
@@ -253,7 +257,7 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleRegister.qualification}
             />
             <MyInput
-              m={2}
+              my={2}
               type="number"
               variant="m"
               placeholder="Percent/CGPA"
@@ -264,7 +268,7 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleRegister.perCGPA}
             />
             <MyInput
-              m={2}
+              my={2}
               type="number"
               variant="m"
               placeholder="Work Experience (Months)"
@@ -275,18 +279,18 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleRegister.exp}
             />
             <MyInput
-              m={2}
+              my={2}
               type="textarea"
               variant="m"
               placeholder="Message"
               name="msg"
-              rows={8}
+              rows={5}
               onChange={onChangeRegister}
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.msg}
             />
-            <MyInput type="button" variant="m primary" ghost m={2} onClick={onSubmitRegister}>
+            <MyInput type="button" variant="m primary" my={2} onClick={onSubmitRegister}>
               Register Now
             </MyInput>
           </Flex>

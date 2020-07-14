@@ -18,7 +18,6 @@ function Semester(props: any) {
       width={[0.95, 0.9]}
       className="cardCarousel"
       style={{
-        padding: 10,
         boxSizing: 'border-box',
         overflow: 'auto',
         display: '-webkit-inline-box',

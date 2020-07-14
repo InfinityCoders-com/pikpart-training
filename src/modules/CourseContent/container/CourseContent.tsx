@@ -16,7 +16,7 @@ function CourseContent(props: any) {
   console.log(semester)
   return (
     <Flex justifyContentCenter alignItemsCenter wrap column>
-      <Span color={`#808184`} variant="h1" style={{ marginTop: '7vmax', marginBottom: '2vmax' }}>
+      <Span variant="h1 primary" style={{ marginTop: '7vmax', marginBottom: '2vmax' }}>
         Course Content
       </Span>
       <Flex wrap justifyContentSpaceBetween style={{ margin: 10, boxSizing: 'border-box' }}>
@@ -30,14 +30,19 @@ function CourseContent(props: any) {
         >
           <img src={courseImage} style={{ width: '80%', borderRadius: 10 }} />
         </Flex>
-        <Flex width={[1, 0.5]} style={{ padding: 10, boxSizing: 'border-box' }} column>
+        <Flex
+          width={[1, 0.5]}
+          style={{ padding: 10, boxSizing: 'border-box' }}
+          column
+          justifyContentCenter
+        >
           <Span fontSize={30} color={'#808184'} style={{ margin: 5, fontWeight: 500 }}>
             {courseName}
           </Span>
-          <Span fontSize={18} color={'#959595'} style={{ margin: 5 }}>
+          <Span fontSize={18} color={'#959595'} style={style}>
             Registration Fee: Rs.{registrationFee}
           </Span>
-          <Span fontSize={18} color={'#959595'} style={{ margin: 5 }}>
+          <Span fontSize={18} color={'#959595'} style={style}>
             Course Fee: Rs.{courseFee}
           </Span>
         </Flex>
@@ -49,3 +54,7 @@ function CourseContent(props: any) {
 }
 
 export default CourseContent
+
+const style = {
+  padding: '10px 20px 0'
+}

@@ -13,7 +13,7 @@ const MOption = styled.option`
   font-weight: 600 !important;
 `
 
-const Select = ({ options, placeholder, name, value, onChange, error, m }: any) => {
+const Select = ({ options, placeholder, name, value, onChange, error, my }: any) => {
   const [state, setState] = React.useState(false)
 
   const changeMe = ({ target }: any) => {
@@ -26,16 +26,15 @@ const Select = ({ options, placeholder, name, value, onChange, error, m }: any) 
       <select
         className="my-select"
         style={{
-          height: 60,
-          borderRadius: 40,
+          borderRadius: 18,
           fontSize: 18,
           fontWeight: placeholder ? (state ? 600 : 400) : 600,
-          padding: '15px 35px',
+          padding: '19px 40px',
           background: '#fff',
           outline: 'none',
           border: '1px solid rgba(179,179,179)',
           color: 'rgba(0,0,0,0.65)',
-          margin: m * 3
+          margin: `${my * 3}px 0px`
         }}
         name={name}
         value={value}
@@ -65,7 +64,7 @@ function MyInput({
   variant,
   placeholder,
   name,
-  m,
+  my,
   rows,
   ghost,
   onClick,
@@ -73,7 +72,7 @@ function MyInput({
   options
 }: any) {
   return type === 'button' ? (
-    <MBtn variant={variant} ghost={ghost} onClick={onClick} m={m}>
+    <MBtn variant={variant} ghost={ghost} onClick={onClick} my={my}>
       {children}
     </MBtn>
   ) : type === 'textarea' ? (
@@ -86,14 +85,14 @@ function MyInput({
         type={type}
         onFocus={onFocus}
         onBlur={onBlur}
-        m={m}
+        my={my}
         variant={variant}
         name={name}
         onChange={onChange}
         value={children}
         ghost={ghost}
         onClick={onClick}
-        rows={rows}
+        rows={rows || 10}
       />
     </Flex>
   ) : type === 'select' ? (
@@ -103,7 +102,7 @@ function MyInput({
       placeholder={placeholder}
       onChange={onChange}
       onBlur={onBlur}
-      m={m}
+      my={my}
     />
   ) : (
     <Flex style={{ position: 'relative' }} width={1}>
@@ -113,7 +112,7 @@ function MyInput({
         type={type}
         onFocus={onFocus}
         onBlur={onBlur}
-        m={m}
+        my={my}
         variant={variant}
         name={name}
         onChange={onChange}

@@ -12,12 +12,16 @@ const FFlex = styled(Flex)`
 
 function Footer() {
   return (
-    <FFlex alignItemsCenter justifyContentCenter>
-      <Flex width={[1, 0.8]} wrap>
-        <Flex width={[1, 0.2]} alignItemsCenter>
-          <img src={logo} style={{ height: 80, width: 'auto' }} />
+    <FFlex alignItemsCenter justiContentSpaceBetween wrap>
+      <Flex width={[1, 0.5]} justifyContentCenter>
+        <Flex width={[1, 0.8]}>
+          <Flex width={[1, 0.2]}>
+            <img src={logo} style={{ height: 80, width: 'auto' }} />
+          </Flex>
         </Flex>
-        <Flex width={[1, 0.8]} alignItemsCenter>
+      </Flex>
+      <Flex width={[1, 0.5]} justifyContentCenter>
+        <Flex width={[1, 0.8]} justifyContentFlexEnd>
           <a href="#" style={{ color: '#3b5998', margin: 10, textDecoration: 'none' }}>
             <FaFacebook size={20} style={{ margin: -4 }} />
             <Span m={2}> Facebook</Span>

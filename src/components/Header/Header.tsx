@@ -11,13 +11,13 @@ const Img = styled.img`
 `
 
 const HFlex = styled(Flex)`
-  border-bottom: 1px solid #000;
+  box-shadow: inset 0px -2px 5px rgba(100, 100, 100, 0.7);
 `
 
 function Header() {
   return (
     <HFlex justifyContentCenter>
-      <Flex width={[0.3, 0.2]} style={{ maxWidth: 200 }}>
+      <Flex width={[0.3, 0.2]} style={{ maxWidth: 200, marginBottom: 4 }}>
         <Img src={jump2join} />
       </Flex>
     </HFlex>
