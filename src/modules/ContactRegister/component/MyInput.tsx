@@ -69,7 +69,9 @@ function MyInput({
   ghost,
   onClick,
   children,
-  options
+  options,
+  value,
+  error
 }: any) {
   return type === 'button' ? (
     <MBtn variant={variant} ghost={ghost} onClick={onClick} my={my}>
@@ -89,7 +91,8 @@ function MyInput({
         variant={variant}
         name={name}
         onChange={onChange}
-        value={children}
+        value={value}
+        error={error}
         ghost={ghost}
         onClick={onClick}
         rows={rows || 10}
@@ -103,6 +106,8 @@ function MyInput({
       onChange={onChange}
       onBlur={onBlur}
       my={my}
+      value={value}
+      error={error}
     />
   ) : (
     <Flex style={{ position: 'relative' }} width={1}>
@@ -116,7 +121,8 @@ function MyInput({
         variant={variant}
         name={name}
         onChange={onChange}
-        value={children}
+        value={value}
+        error={error}
         ghost={ghost}
         onClick={onClick}
       />

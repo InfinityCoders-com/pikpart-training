@@ -58,8 +58,35 @@ export const LabelValue = ({ label, value, icon }: any) => {
 }
 
 function ContactRegister(props: any) {
-  const [register, setRegister] = React.useState({ values: {}, errors: {} })
-  const [contact, setContact] = React.useState({ values: {}, errors: {} })
+  const [contact, setContact] = React.useState({
+    values: { name: '', email: '', phone: '', msg: '' },
+    errors: { name: false, email: false, phone: false, msg: false }
+  })
+  const [register, setRegister] = React.useState({
+    values: {
+      courseName: '',
+      name: '',
+      email: '',
+      phone: '',
+      traningCenter: '',
+      qualification: '',
+      perCGPA: '',
+      exp: '',
+      msg: ''
+    },
+    errors: {
+      courseName: false,
+      name: false,
+      email: false,
+      phone: false,
+      traningCenter: false,
+      qualification: false,
+      perCGPA: false,
+      exp: false,
+      msg: false
+    }
+  })
+
   const [inputStyleContact, setInputStyleContact] = React.useState({
     name: false,
     email: false,
@@ -79,23 +106,16 @@ function ContactRegister(props: any) {
   })
 
   const changePlacholderContact = ({ target }: any) => {
-    console.log(target)
     setInputStyleContact({ ...inputStyleContact, [target.name]: true })
   }
   function onBlurContact({ target }: any) {
+    console.log(contact)
     if (!target.value) setInputStyleContact({ ...inputStyleContact, [target.name]: false })
-  }
-
-  const changePlacholderRegister = ({ target }: any) => {
-    console.log(target)
-    setInputStyleRegister({ ...inputStyleRegister, [target.name]: true })
-  }
-  function onBlurRegister({ target }: any) {
-    if (!target.value) setInputStyleRegister({ ...inputStyleRegister, [target.name]: false })
-  }
-
-  const onChangeRegister = ({ target }: any) => {
-    setRegister({ ...register, values: { ...register.values, [target.name]: target.value } })
+    if (!target.value) {
+      setContact({ ...contact, errors: { ...contact.errors, [target.name]: true } })
+    } else {
+      setContact({ ...contact, errors: { ...contact.errors, [target.name]: false } })
+    }
   }
 
   const onChangeContact = ({ target }: any) => {
@@ -105,6 +125,23 @@ function ContactRegister(props: any) {
   const onSubmitContact = () => {
     alert(JSON.stringify(contact.values))
   }
+
+  const changePlacholderRegister = ({ target }: any) => {
+    setInputStyleRegister({ ...inputStyleRegister, [target.name]: true })
+  }
+  function onBlurRegister({ target }: any) {
+    if (!target.value) setInputStyleRegister({ ...inputStyleRegister, [target.name]: false })
+    if (!target.value) {
+      setRegister({ ...register, errors: { ...register.errors, [target.name]: true } })
+    } else {
+      setRegister({ ...register, errors: { ...register.errors, [target.name]: false } })
+    }
+  }
+
+  const onChangeRegister = ({ target }: any) => {
+    setRegister({ ...register, values: { ...register.values, [target.name]: target.value } })
+  }
+
   const onSubmitRegister = () => {
     alert(JSON.stringify(register.values))
   }
@@ -148,6 +185,8 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleContact.name}
               onFocus={changePlacholderContact}
               onBlur={onBlurContact}
+              value={contact.values.name}
+              error={contact.errors.name}
             />
             <MyInput
               my={2}
@@ -159,6 +198,8 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleContact.email}
               onFocus={changePlacholderContact}
               onBlur={onBlurContact}
+              value={contact.values.email}
+              error={contact.errors.email}
             />
             <MyInput
               my={2}
@@ -170,6 +211,8 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleContact.phone}
               onFocus={changePlacholderContact}
               onBlur={onBlurContact}
+              value={contact.values.phone}
+              error={contact.errors.phone}
             />
             <MyInput
               my={2}
@@ -182,6 +225,8 @@ function ContactRegister(props: any) {
               inputStyle={inputStyleContact.msg}
               onFocus={changePlacholderContact}
               onBlur={onBlurContact}
+              value={contact.values.msg}
+              error={contact.errors.msg}
             />
             <MyInput type="button" variant="m primary" my={2} onClick={onSubmitContact}>
               Contact Us
@@ -203,6 +248,8 @@ function ContactRegister(props: any) {
               placeholder="Course Name"
               name="courseName"
               onChange={onChangeRegister}
+              value={register.values.courseName}
+              error={register.errors.courseName}
             />
             <MyInput
               my={2}
@@ -214,6 +261,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.name}
+              value={register.values.name}
+              error={register.errors.name}
             />
             <MyInput
               my={2}
@@ -225,6 +274,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.email}
+              value={register.values.email}
+              error={register.errors.email}
             />
             <MyInput
               my={2}
@@ -236,6 +287,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.phone}
+              value={register.values.phone}
+              error={register.errors.phone}
             />
             <MyInput
               type="select"
@@ -244,6 +297,8 @@ function ContactRegister(props: any) {
               placeholder="Traning Center"
               name="traningCenter"
               onChange={onChangeRegister}
+              value={register.values.traningCenter}
+              error={register.errors.traningCenter}
             />
             <MyInput
               my={2}
@@ -255,6 +310,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.qualification}
+              value={register.values.qualification}
+              error={register.errors.qualification}
             />
             <MyInput
               my={2}
@@ -266,6 +323,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.perCGPA}
+              value={register.values.perCGPA}
+              error={register.errors.perCGPA}
             />
             <MyInput
               my={2}
@@ -277,6 +336,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.exp}
+              value={register.values.exp}
+              error={register.errors.exp}
             />
             <MyInput
               my={2}
@@ -289,6 +350,8 @@ function ContactRegister(props: any) {
               onFocus={changePlacholderRegister}
               onBlur={onBlurRegister}
               inputStyle={inputStyleRegister.msg}
+              value={register.values.msg}
+              error={register.errors.msg}
             />
             <MyInput type="button" variant="m primary" my={2} onClick={onSubmitRegister}>
               Register Now
