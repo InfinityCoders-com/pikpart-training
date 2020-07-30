@@ -9,6 +9,9 @@ import data from './data.json'
 import CourseContent from './modules/CourseContent'
 import ContactRegister from './modules/ContactRegister'
 import Footer from './components/Footer'
+import Feedback from './modules/Feedback/container/Feedback'
+import Application from './modules/Application/container/Application'
+import ContactUs from './modules/ContactUs/container/ContactUs'
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
       <Banner />
       <AboutUs data={data.aboutUs} />
       <CourseContent data={data.courseContent} />
-      <ContactRegister courses={data.courses} traningLocations={data.traningLocations} />
+      <Application />
+      <Feedback />
+      {/* <ContactRegister courses={data.courses} traningLocations={data.traningLocations} /> */}
+      <ContactUs />
       <Footer />
     </ThemeProvider>
   )

@@ -12,7 +12,7 @@ const FFlex = styled(Flex)`
 
 function Footer() {
   return (
-    <FFlex alignItemsCenter justiContentSpaceBetween wrap>
+    <FFlex alignItemsCenter justifyContentSpaceBetween wrap>
       <Flex width={[1, 0.5]} justifyContentCenter>
         <Flex width={[1, 0.8]}>
           <Flex width={[1, 0.2]}>

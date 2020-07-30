@@ -93,7 +93,7 @@ function MyInput({
         onChange={onChange}
         value={value}
         error={error}
-        ghost={ghost}
+        // ghost={ghost}
         onClick={onClick}
         rows={rows || 10}
       />
@@ -123,7 +123,7 @@ function MyInput({
         onChange={onChange}
         value={value}
         error={error}
-        ghost={ghost}
+        // ghost={ghost}
         onClick={onClick}
       />
     </Flex>
