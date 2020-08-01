@@ -2,21 +2,6 @@ import React from 'react'
 import { Flex, styled } from '@icstark/ui'
 import { FaThumbsUp } from 'react-icons/fa'
 
-// const ContactButton = styled.button`
-//   position: fixed;
-//   bottom: 20px;
-//   right: 30px;
-//   z-index: 99;
-//   font-size: 18px;
-//   border: none;
-//   outline: none;
-//   background-color: #737373;
-//   color: white;
-//   cursor: pointer;
-//   padding: 15px;
-//   border-radius: 4px;
-// `
-
 function Feedback() {
   return (
     <div style={{ width: '90%', margin: '4vmax auto' }}>
@@ -89,7 +74,6 @@ function Feedback() {
           <FaThumbsUp style={{ fontSize: '30px' }} />
         </div>
       </Flex>
-      {/* <ContactButton>contact us</ContactButton> */}
     </div>
   )
 }

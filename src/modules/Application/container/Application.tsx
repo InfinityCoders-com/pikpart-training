@@ -6,7 +6,7 @@ import ProfessionalForm from '../component/ProfessionalForm'
 function Application() {
   return (
     <Flex
-      justifyContentSpaceBetween
+      justifyContentSpaceAround
       style={{
         width: '90%',
         margin: '4vmax auto'

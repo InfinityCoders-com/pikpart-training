@@ -115,7 +115,7 @@ function ContactUs() {
             </div>
             <div style={{ margin: '10px 0px' }}>
               <FormInput
-                label="Name"
+                label="Your Name*"
                 type="text"
                 placeholder="Full Name"
                 name="Name"
@@ -126,7 +126,7 @@ function ContactUs() {
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Phone"
+                label="Your Phone*"
                 type="number"
                 placeholder="Phone Number"
                 name="Phone"
@@ -137,7 +137,7 @@ function ContactUs() {
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Your Email"
+                label="Your Email*"
                 type="email"
                 placeholder="Email"
                 name="Email"
@@ -148,7 +148,7 @@ function ContactUs() {
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Your Message"
+                label="Your Message*"
                 type="textarea"
                 placeholder="Message"
                 name="Message"
@@ -164,9 +164,6 @@ function ContactUs() {
                 CONTACT US
               </Button>
             </div>
-            {/* <Button variant="m primary" disabled={!isSubmitEnabled}>
-              CONTACT US
-            </Button> */}
           </Flex>
         </ContactUsContainer>
       </Modal>
