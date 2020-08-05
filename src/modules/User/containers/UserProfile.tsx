@@ -1,7 +1,9 @@
 import { Flex, Span } from '@icstark/ui'
 import React from 'react'
 import { FaEnvelope, FaMobile, FaUserCircle, FaCheckCircle } from 'react-icons/fa'
-import { Section, SubSection, UserProfile, Profile, Details } from '../styled'
+import { Section, SubSection, UserProfile, Profile, Details, UserCourse } from '../styled'
+import CourseContent from '../../CourseContent'
+
 // import { Section, SubSection } from '../../../style/styled'
 // import { Details, Profile, UserProfile } from '../styled'
 // import ManageAddress from './ManageAddress'
@@ -26,9 +28,12 @@ function Userprofile() {
 
   return (
     <Section>
-      <SubSection style={{ padding: '50px 0' }}>
+      <SubSection style={{ padding: '50px 0', width: '100% ! important' }}>
         <UserProfile>
-          <Flex width={[1, 0.3]} style={{ padding: '0 15px', marginBottom: 30 }}>
+          <Flex
+            width={[1, 0.2]}
+            style={{ padding: '0 15px', marginBottom: 30, position: 'sticky', top: 50 }}
+          >
             <Profile>
               <FaUserCircle size={60} style={{ display: 'block', margin: '0 auto' }} />
               <Details>
@@ -40,10 +45,11 @@ function Userprofile() {
               </Details>
             </Profile>
           </Flex>
-          {/* <Flex width={[1, 0.7]} column style={{ padding: '0 15px' }}>
-            <ManageAddress />
-            <ManageVehicle />
-          </Flex> */}
+          <Flex width={[1, 0.8]} column style={{ padding: '0 15px' }}>
+            <UserCourse>
+              <CourseContent />
+            </UserCourse>
+          </Flex>
         </UserProfile>
       </SubSection>
     </Section>

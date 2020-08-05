@@ -12,11 +12,35 @@ function Home() {
   return (
     <>
       <Banner />
-      <Certificate />
+      <div
+        style={{
+          background: 'linear-gradient(to bottom,#eee, #fff)',
+          // background: 'linear-gradient(to bottom,#1890ff -100%, #fff 145%)',
+          padding: '5px 0px'
+        }}
+      >
+        <Certificate />
+      </div>
       {/* <AboutUs data={data.aboutUs} /> */}
       {/* <CourseContent data={data.courseContent} /> */}
-      <Application />
-      <Feedback />
+      <div
+        style={{
+          background: 'linear-gradient(to bottom,#fff, #eee)',
+          // background: 'linear-gradient(to bottom,#fff -30%, #1890ff 128%)',
+          padding: '3px 0px'
+        }}
+      >
+        <Application />
+      </div>
+      <div
+        style={{
+          background: 'linear-gradient(to bottom,#eee, #fff)',
+          // background: 'linear-gradient(to bottom,#1890ff -18%, #fff 95%)',
+          padding: '5px 0px'
+        }}
+      >
+        <Feedback />
+      </div>
       {/* <ContactRegister courses={data.courses} traningLocations={data.traningLocations} /> */}
       {/* <ContactUs /> */}
     </>

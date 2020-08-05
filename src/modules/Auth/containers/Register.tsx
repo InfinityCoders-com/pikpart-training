@@ -173,7 +173,8 @@ function Register({ history }: IRegistration) {
       } else {
         localStorage.setItem('AuthToken', response.data.data.auth_token)
         localStorage.setItem('user', JSON.stringify(response.data.data))
-        history.push(RoutesPath.HOME)
+        // history.push(RoutesPath.HOME)
+        history.push(RoutesPath.UserProfile)
       }
       setFormLoading('')
     } catch (e) {

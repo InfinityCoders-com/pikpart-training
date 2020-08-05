@@ -14,9 +14,9 @@ export const Card = styled(Flex)`
 `
 
 export const Profile = styled(Card)`
-  top: 15px;
+  //   position: sticky;
+  //   top: 15px;
   width: 100%;
-  position: sticky;
   flex-direction: column;
   @media (max-width: 786px) {
     flex-direction: row;
@@ -46,7 +46,8 @@ export const SubSection = styled.div`
   }
   @media (max-width: 1440px) {
     transition: 0.6s linear;
-    width: 80%;
+    // width: 80%;
+    width: 90%;
   }
   @media (max-width: 1200px) {
     transition: 0.6s linear;
@@ -60,4 +61,8 @@ export const SubSection = styled.div`
     transition: 0.6s linear;
     width: 95%;
   }
+`
+export const UserCourse = styled(Card)`
+  border-radius: 10px;
+  box-shadow: rgb(204, 204, 204) 0 0 16px;
 `

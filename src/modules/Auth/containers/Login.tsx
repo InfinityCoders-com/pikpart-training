@@ -31,7 +31,8 @@ function Login({ history }: any) {
       } else {
         localStorage.setItem('AuthToken', response.data.data.authToken)
         localStorage.setItem('user', JSON.stringify(response.data.data))
-        history.push(RoutesPath.HOME)
+        // history.push(RoutesPath.HOME)
+        history.push(RoutesPath.UserProfile)
       }
       setLoading(false)
     } catch (e) {
