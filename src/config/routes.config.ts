@@ -1,6 +1,10 @@
 import { ForgotPassword, Login, LoginMobileOTP, Register } from '../modules/Auth'
 import Logout from '../modules/Auth/containers/Logout'
 import Home from '../modules/Home/container/Home'
+import AboutUs from '../modules/AboutUs/container/AboutUs'
+import CourseContent from '../modules/CourseContent'
+import Userprofile from '../modules/User/containers/UserProfile'
+// import CourseContent from '../modules/CourseContent/container/CourseContent'
 
 
 // Leave Label Empty If you don't want it in SideBar Item
@@ -14,6 +18,9 @@ export const RoutesPath = {
   Registration: '/registration',
   Logout: '/logout',
   ForgotPassword: '/forgot-password',
+  AboutUs: '/aboutUs',
+  Course: '/course',
+  UserProfile: '/userProfile'
 
 }
 
@@ -90,4 +97,40 @@ export const routesConfig: any = [
     link: '/',
     path: '/'
   },
+  {
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    component: AboutUs,
+    exact: true,
+    icon: undefined,
+    label: '',
+    layout: ['header', 'footer'],
+    link: RoutesPath.AboutUs,
+    path: RoutesPath.AboutUs
+  },
+  {
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    component: CourseContent,
+    exact: true,
+    icon: undefined,
+    label: '',
+    layout: ['header', 'footer'],
+    link: RoutesPath.Course,
+    path: RoutesPath.Course
+  },
+  {
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    component: Userprofile,
+    exact: true,
+    icon: undefined,
+    label: '',
+    layout: ['header', 'footer'],
+    link: RoutesPath.UserProfile,
+    path: RoutesPath.UserProfile
+  }
 ]

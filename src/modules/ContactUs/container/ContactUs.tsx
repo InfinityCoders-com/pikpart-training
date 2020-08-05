@@ -6,21 +6,6 @@ import { LabelValue } from '../../ContactRegister/container/ContactRegister'
 import { FaRegEnvelope, FaMobileAlt, FaWhatsapp, FaMapMarkedAlt } from 'react-icons/fa'
 import { FormInput } from '../../../components/Forms/Form'
 
-const ContactUsButton = styled.button`
-  position: fixed;
-  bottom: 20px;
-  left: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #61dafb;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-  opacity: 0.7;
-`
 const ContactUsContainer = styled(Flex)`
   justify-content: center;
   align-items: center;
@@ -76,7 +61,7 @@ function ContactUs() {
     contact.values.Name && contact.values.Phone && contact.values.Email && contact.values.Message
   return (
     <>
-      <ContactUsButton
+      <div
         onClick={() =>
           setModal({
             ...modal,
@@ -85,7 +70,7 @@ function ContactUs() {
         }
       >
         Contact Us
-      </ContactUsButton>
+      </div>
       <Modal
         variant="l Left-Center"
         toggleModal={modal.show}
@@ -106,7 +91,7 @@ function ContactUs() {
             <div
               style={{
                 textAlign: 'center',
-                // margin: '10px',
+
                 textDecoration: 'underline',
                 fontSize: 14
               }}

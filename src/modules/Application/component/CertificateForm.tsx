@@ -67,7 +67,9 @@ function CertificateForm(props: any) {
         }
       >
         <FaCertificate style={{ fontSize: '60px', marginBottom: '20px' }} />
-        <div style={{ fontWeight: 500, color: '#676767' }}>Apply to Certified</div>
+        <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>
+          Apply to Certified
+        </div>
       </Flex>
       <Modal
         variant="xl Left-Center"
@@ -232,7 +234,7 @@ function CertificateForm(props: any) {
                 />
               </Flex>
             </Flex>
-            <div style={{ width: '30%', margin: '0 auto' }}>
+            {/* <div style={{ width: '30%', margin: '0 auto' }}>
               <Button
                 variant="m primary"
                 disabled={!isSubmitEnabled}
@@ -240,7 +242,10 @@ function CertificateForm(props: any) {
               >
                 REGISTER
               </Button>
-            </div>
+            </div> */}
+            <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
+              REGISTER
+            </Button>
           </Flex>
         </FormContainer>
       </Modal>

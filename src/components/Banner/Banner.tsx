@@ -10,11 +10,6 @@ const BFlex = styled(Flex)`
     max-height: 250px;
   }
 `
-const BIFlex = styled(Flex)`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-`
 
 const BImg = styled.img`
   width: 100%;
@@ -24,16 +19,6 @@ const BImg = styled.img`
 function Banner({ title, des }: any) {
   return (
     <BFlex>
-      <BIFlex justifyContentCenter alignItemsCenter column>
-        <Span fontSize={50} style={{ color: '#fff', fontWeight: 500 }}>
-          {title}
-        </Span>
-        {des && (
-          <Span fontSize={20} style={{ color: '#fff', fontWeight: 500 }}>
-            {des}
-          </Span>
-        )}
-      </BIFlex>
       <BImg src={banner} />
     </BFlex>
   )

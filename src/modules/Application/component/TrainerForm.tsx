@@ -57,7 +57,7 @@ function TrainerForm() {
         }
       >
         <FaUser style={{ fontSize: '60px', marginBottom: '20px' }} />
-        <div style={{ fontWeight: 500, color: '#676767' }}>Apply For Trainer</div>
+        <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>Apply For Trainer</div>
       </Flex>
       <Modal
         variant="xl Left-Center"
@@ -222,15 +222,11 @@ function TrainerForm() {
                 />
               </Flex>
             </Flex>
-            <div style={{ width: '30%', margin: '0 auto' }}>
-              <Button
-                variant="m primary"
-                disabled={!isSubmitEnabled}
-                style={{ width: '100%', margin: '0 auto' }}
-              >
-                REGISTER
-              </Button>
-            </div>
+            {/* <div style={{ width: '30%', margin: '0 auto' }}> */}
+            <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
+              REGISTER
+            </Button>
+            {/* </div> */}
           </Flex>
         </FormContainer>
       </Modal>

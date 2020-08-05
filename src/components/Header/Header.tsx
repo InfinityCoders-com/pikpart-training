@@ -1,65 +1,71 @@
 import React from 'react'
-import { Flex, styled, Button } from '@icstark/ui'
+import { Flex, styled, Button, Link, Label, Span } from '@icstark/ui'
 import jump2join from '../../assets/jump2join.jpeg'
 import { RoutesPath } from '../../config/routes.config'
+import ContactUs from '../../modules/ContactUs/container/ContactUs'
+import { LogInOutButton, UserMenuLink, UserProfileMenu } from './styled'
+import { FaUserCircle } from 'react-icons/fa'
 
-export const LogInOutButton = styled.button`
-  border: 1px solid black;
-  padding: 4px 12px;
-  border-radius: 2px;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.2px;
-  background: transparent;
-  transition: 0.6s ease;
-  margin-right: 5px;
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    cursor: pointer;
-    transition: 0.4s ease;
-  }
-  @media (max-width: 540px) {
-    padding: 4px 8px;
-  }
-`
-
-// const Img = styled.img`
-//   width: 100%;
-//   height: auto;
-//   @media screen and (max-width: 500px) {
-//     max-height: 80px;
-//   }
-// `
-
-// const HFlex = styled(Flex)`
-//   box-shadow: inset 0px -2px 5px rgba(100, 100, 100, 0.7);
-// `
-
-function Header({ history }: any) {
+function Header(props: any) {
+  let { history } = props
+  const [menuToggle, setMenuToggle] = React.useState(false)
   const storage = localStorage.getItem('AuthToken')
+  const user = JSON.parse(localStorage.getItem('user') || '{"firstName": "Guest"}')
   const isLoggedin = storage && storage
 
+  const LoggedInMenu = () => {
+    return (
+      <UserMenuLink style={{ marginRight: '60px' }}>
+        <Span
+          onClick={(e: any) => {
+            e.preventDefault()
+            setMenuToggle(!menuToggle)
+          }}
+        >
+          <FaUserCircle size={25} style={{ marginRight: 10 }} />
+          <Label>Hi! {user.firstName || 'Guest'}</Label>
+        </Span>
+        {menuToggle ? (
+          <UserProfileMenu>
+            <Link to={RoutesPath.HOME}>Home</Link>
+            <Link to={RoutesPath.UserProfile}>Profile</Link>
+            <Link to={RoutesPath.Logout}>Log Out</Link>
+          </UserProfileMenu>
+        ) : null}
+      </UserMenuLink>
+    )
+  }
+
   return (
-    //   {/* <HFlex justifyContentCenter>
-    //   <Flex width={[0.3, 0.2]} style={{ maxWidth: 200, marginBottom: 4 }}>
-    //     <Img src={jump2join} />
-    //   </Flex>
-    // </HFlex> */}
-    <Flex justifyContentSpaceBetween alignItemsCenter style={{ padding: '0px 5px' }}>
+    <Flex justifyContentSpaceBetween alignItemsCenter>
       <Flex alignItemsCenter>
-        <img style={{ height: 70, width: 'auto' }} src={jump2join} alt="logo" />
+        <Link to="/">
+          <img style={{ height: 70, width: 'auto' }} src={jump2join} alt="logo" />
+        </Link>
       </Flex>
       <Flex>
-        {isLoggedin ? (
-          <LogInOutButton onClick={() => history.replace(RoutesPath.Logout)} title={'Logout'}>
-            LOG OUT
-          </LogInOutButton>
-        ) : (
-          <LogInOutButton onClick={() => history.replace(RoutesPath.Login)} title={'Login'}>
-            LOG IN
-          </LogInOutButton>
-        )}
+        <Flex style={{ paddingRight: '15px' }}>
+          <Link to={RoutesPath.Course}>Courses</Link>
+        </Flex>
+        <Flex style={{ paddingRight: '15px' }}>
+          <Link to={RoutesPath.AboutUs}>About Us</Link>
+        </Flex>
+        <Flex style={{ paddingRight: '15px' }}>
+          <div
+            style={{ padding: '9px 16px', fontSize: '14px', color: '#1890ff', cursor: 'pointer' }}
+          >
+            <ContactUs />
+          </div>
+        </Flex>
+        <Flex>
+          {isLoggedin ? (
+            <LoggedInMenu />
+          ) : (
+            <LogInOutButton onClick={() => history.replace(RoutesPath.Login)} title={'Login'}>
+              LOG IN
+            </LogInOutButton>
+          )}
+        </Flex>
       </Flex>
     </Flex>
   )

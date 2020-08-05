@@ -19,7 +19,7 @@ code {
 
 .semester:hover {
   position: relative;
-  transform: translate(0px, -20px);
+  transform: translate(0px, -10px);
   /* transform: scale(1.1); */
   /* background-color: rgba(51, 178, 212, 0.3); */
 }
@@ -37,9 +37,10 @@ code {
   height: 6px;
   width: 6px;
 }
-.cardCarousel:hover {
+/* .cardCarousel:hover {
   height: 500px !important;
-}
+  height: auto !important;
+} */
 .cardCarousel::-webkit-scrollbar-thumb {
   background-color: rgba(100, 100, 100, 0.3);
   border-radius: 3px;
@@ -47,22 +48,37 @@ code {
 
 .myCard {
   transition: all 0.5s;
+  /* height: 600px; */
 }
 .myCard .cardDes {
   display: none;
 }
 .myCard:hover {
-  transform: scale(1.2);
+  transform: scale(1.02);
+  width: 400px;
+  z-index: 999;
+  overflow: auto;
+  /* height: auto; */
+  /* transform: scale(1.2);
   width: 400px;
   height: 400px;
-  z-index: 999;
-
+  z-index: 999; */
+  /* height: 600px; */
   /* top: 30px; */
+}
+.myCard::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.myCard::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 500px) {
   .myCard:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
+    transform: scale(1.02);
     width: 300px;
     min-width: 300px;
     max-height: auto;

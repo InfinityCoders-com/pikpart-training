@@ -15,11 +15,12 @@ function Semester(props: any) {
   //   console.log(data.paper)
   return (
     <Flex
-      width={[0.95, 0.9]}
+      width={1}
       className="cardCarousel"
       style={{
         boxSizing: 'border-box',
-        overflow: 'auto',
+        overflowX: 'auto',
+        overflowY: 'hidden',
         display: '-webkit-inline-box',
         margin: '30px 0'
       }}

@@ -2,6 +2,12 @@ import React from 'react'
 import { Flex, Span } from '@icstark/ui'
 import { Semester } from '../component'
 import Card from '../component/Card'
+import data from '../../../data.json'
+import { H2Heading, Section } from '../../AboutUs/container/AboutUs'
+
+const style = {
+  padding: '10px 20px 0'
+}
 
 const Sem = (a: any) => {
   const data = a.map((item: any, i: any) => {
@@ -10,51 +16,51 @@ const Sem = (a: any) => {
   return data
 }
 
-function CourseContent(props: any) {
-  const { data } = props
-  const { courseName, courseImage, registrationFee, courseFee, semester } = data
-  console.log(semester)
+// function CourseContent(props: any) {
+function CourseContent() {
   return (
-    <Flex justifyContentCenter alignItemsCenter wrap column>
-      <Span variant="h1 primary" style={{ marginTop: '7vmax', marginBottom: '2vmax' }}>
-        Course Content
-      </Span>
-      <Flex wrap justifyContentSpaceBetween style={{ margin: 10, boxSizing: 'border-box' }}>
-        <Flex
-          width={[1, 0.5]}
-          style={{ padding: 10, boxSizing: 'border-box' }}
-          className="semester"
-          column
-          justifyContentCenter
-          alignItemsCenter
-        >
-          <img src={courseImage} style={{ width: '80%', borderRadius: 10 }} />
+    <Section>
+      <H2Heading>Course Content</H2Heading>
+      <Flex
+        justifyContentCenter
+        alignItemsCenter
+        wrap
+        column
+        width={0.9}
+        style={{ margin: '0 auto' }}
+      >
+        <Flex wrap justifyContentSpaceBetween style={{ boxSizing: 'border-box' }}>
+          <Flex
+            width={[1, 0.5]}
+            style={{ boxSizing: 'border-box' }}
+            className="semester"
+            column
+            justifyContentSpaceBetween
+            alignItemsCenter
+          >
+            <img src={data.courseContent.courseImage} style={{ width: '100%', borderRadius: 10 }} />
+          </Flex>
+          <Flex
+            width={[1, 0.5]}
+            style={{ padding: 20, boxSizing: 'border-box' }}
+            column
+            justifyContentCenter
+          >
+            <Span fontSize={16} color={'#808184'} style={{ margin: 5, fontWeight: 500 }}>
+              {data.courseContent.courseName}
+            </Span>
+            <Span fontSize={14} color={'#959595'} style={style}>
+              Registration Fee: Rs.{data.courseContent.registrationFee}
+            </Span>
+            <Span fontSize={14} color={'#959595'} style={style}>
+              Course Fee: Rs.{data.courseContent.courseFee}
+            </Span>
+          </Flex>
         </Flex>
-        <Flex
-          width={[1, 0.5]}
-          style={{ padding: 10, boxSizing: 'border-box' }}
-          column
-          justifyContentCenter
-        >
-          <Span fontSize={30} color={'#808184'} style={{ margin: 5, fontWeight: 500 }}>
-            {courseName}
-          </Span>
-          <Span fontSize={18} color={'#959595'} style={style}>
-            Registration Fee: Rs.{registrationFee}
-          </Span>
-          <Span fontSize={18} color={'#959595'} style={style}>
-            Course Fee: Rs.{courseFee}
-          </Span>
-        </Flex>
+        {Sem(data.courseContent.semester.sem)}
       </Flex>
-
-      {Sem(semester.sem)}
-    </Flex>
+    </Section>
   )
 }
 
 export default CourseContent
-
-const style = {
-  padding: '10px 20px 0'
-}
