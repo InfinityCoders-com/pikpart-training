@@ -106,6 +106,18 @@ function CertificateForm(props: any) {
                     {
                       label: 'Diploma Course in Two Wheeler Mechanism and Maintenance',
                       value: 'Diploma Course in Two Wheeler Mechanism and Maintenance'
+                    },
+                    {
+                      label: 'Training Course In Electric Vehicle Technologies',
+                      value: 'Training Course In Electric Vehicle Technologies'
+                    },
+                    {
+                      label: 'Training Course In Data Entry Operator',
+                      value: 'Training Course In Data Entry Operator'
+                    },
+                    {
+                      label: 'Training Course In Maintenance Supervisor',
+                      value: 'Training Course In Maintenance Supervisor'
                     }
                   ]}
                   value={form.values['Course']}
@@ -123,9 +135,9 @@ function CertificateForm(props: any) {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Full Name*"
+                  label="Full Name*"
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="John Doe"
                   name="Name"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -136,9 +148,9 @@ function CertificateForm(props: any) {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Email*"
+                  label="Email*"
                   type="email"
-                  placeholder="Email"
+                  placeholder="abc@xyz.com"
                   name="Email"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -149,9 +161,9 @@ function CertificateForm(props: any) {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label=" Your Phone Number*"
+                  label="Phone Number*"
                   type="number"
-                  placeholder="Phone Number"
+                  placeholder="9999999999"
                   name="Phone"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -185,7 +197,7 @@ function CertificateForm(props: any) {
                 <FormInput
                   label="Highest Qualification*"
                   type="text"
-                  placeholder="Highest Qualification"
+                  placeholder="MCA"
                   name="Qualification"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -222,9 +234,9 @@ function CertificateForm(props: any) {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Message*"
+                  label="Message*"
                   type="textarea"
-                  placeholder="Message"
+                  placeholder="Message for Enquiry"
                   name="Message"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -234,18 +246,11 @@ function CertificateForm(props: any) {
                 />
               </Flex>
             </Flex>
-            {/* <div style={{ width: '30%', margin: '0 auto' }}>
-              <Button
-                variant="m primary"
-                disabled={!isSubmitEnabled}
-                style={{ width: '100%', margin: '0 auto' }}
-              >
-                REGISTER
-              </Button>
-            </div> */}
+            {/* <div style={{ width: '30%', margin: '0 auto' }}> */}
             <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
               REGISTER
             </Button>
+            {/* </div> */}
           </Flex>
         </FormContainer>
       </Modal>

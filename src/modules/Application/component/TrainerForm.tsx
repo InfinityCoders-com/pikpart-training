@@ -94,6 +94,18 @@ function TrainerForm() {
                     {
                       label: 'Diploma Course in Two Wheeler Mechanism and Maintenance',
                       value: 'Diploma Course in Two Wheeler Mechanism and Maintenance'
+                    },
+                    {
+                      label: 'Training Course In Electric Vehicle Technologies',
+                      value: 'Training Course In Electric Vehicle Technologies'
+                    },
+                    {
+                      label: 'Training Course In Data Entry Operator',
+                      value: 'Training Course In Data Entry Operator'
+                    },
+                    {
+                      label: 'Training Course In Maintenance Supervisor',
+                      value: 'Training Course In Maintenance Supervisor'
                     }
                   ]}
                   value={form.values['Course']}
@@ -111,9 +123,9 @@ function TrainerForm() {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Full Name*"
+                  label="Full Name*"
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="John Doe"
                   name="Name"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -124,9 +136,9 @@ function TrainerForm() {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Email*"
+                  label="Email*"
                   type="email"
-                  placeholder="Email"
+                  placeholder="abc@xyz.com"
                   name="Email"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -137,9 +149,9 @@ function TrainerForm() {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label=" Your Phone Number*"
+                  label="Phone Number*"
                   type="number"
-                  placeholder="Phone Number"
+                  placeholder="9999999999"
                   name="Phone"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -173,7 +185,7 @@ function TrainerForm() {
                 <FormInput
                   label="Highest Qualification*"
                   type="text"
-                  placeholder="Highest Qualification"
+                  placeholder="MCA"
                   name="Qualification"
                   onChange={onchange}
                   onBlur={onBlur}
@@ -210,9 +222,9 @@ function TrainerForm() {
               </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Your Message*"
+                  label="Message*"
                   type="textarea"
-                  placeholder="Message"
+                  placeholder="Message for Enquiry"
                   name="Message"
                   onChange={onchange}
                   onBlur={onBlur}

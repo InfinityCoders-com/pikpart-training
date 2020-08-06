@@ -18,7 +18,6 @@ const Body = styled(Flex)`
   height: 97%;
   background: #fff;
   bottom: 0;
-
   padding: 10px;
 `
 
@@ -72,7 +71,8 @@ function Card({ head, title, des, credits, courseCode, units }: any) {
           }
         }
       >
-        {head || <CC>Course-Code: {courseCode}</CC>}
+        {/* {head || <CC>Course-Code: {courseCode}</CC>} */}
+        {head || (courseCode ? <CC>Course-Code: {courseCode}</CC> : null)}
         {title && (
           <Title
             style={

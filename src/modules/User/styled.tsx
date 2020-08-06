@@ -65,4 +65,5 @@ export const SubSection = styled.div`
 export const UserCourse = styled(Card)`
   border-radius: 10px;
   box-shadow: rgb(204, 204, 204) 0 0 16px;
+  //   background: linear-gradient(to bottom, #eee, #fff);
 `

@@ -40,8 +40,8 @@ function LoginMobileOTP({ history }: any) {
 
   function onSuccess() {
     localStorage.setItem('AuthToken', loginForm.values.Mobile)
-    // history.push(RoutesPath.HOME)
-    history.push(RoutesPath.UserProfile)
+    history.push(RoutesPath.HOME)
+    // history.push(RoutesPath.UserProfile)
   }
   console.log(timer)
 

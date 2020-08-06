@@ -57,6 +57,7 @@ export const UserMenuLink = styled.div`
       cursor: pointer;
       text-transform: capitalize;
       font-weight: 600;
+      min-width: 50px;
       color: ${(props: any) => props.theme.colors.primary};
     }
   }

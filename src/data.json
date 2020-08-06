@@ -1,107 +1,678 @@
 {
   "aboutUs": "Jump2Join is one of the best station for offline mechanics training and to get placed based on certification secured. The core of our mission and vision is innovation: We arechanging the way people think about selecting their profession.  Everyday we help people revive their career and improve their lives.  At Jump2Join, we call our employees “Career Shapers” because everyone here works for the ultimate purpose: To help people to reshape their careers. We make the dreams of our recruiting clients come true by helping them hire the right people for their companies. We know the pain of being unemployed after successful completion of professional courses, thus we train them to get assured job best suited as per their skills.  At Jump2Join, we provide offline training to qualified professionals who are jobless or want to reshape their careers through our training programs.  At Jump2Join, we provide solutions to employers to choose or request best-trained resources available as per industry standards, and professionals of all industries are involved with us to make this happen.",
 
-  "courseContent": {
-    "courseName": "Diploma Course in Two Wheeler Mechanism and Maintenance",
-    "courseImage": "https://live.staticflickr.com/65535/48732780891_8611957ece_b.jpg",
-    "registrationFee": 800,
-    "courseFee": 12000,
-    "semester": {
-      "sem": [
-        {
-          "paper": [
-            {
-              "name": "1: BASIC OF TWO WHEELERS",
-              "courseCode": "20TWMV0101",
-              "credits": {
-                "theory": 3,
-                "practicals": 3,
-                "marks": 100
+  "courseContent": [
+    {
+      "id": 0,
+      "courseName": "Diploma Course in Two Wheeler Mechanism and Maintenance",
+      "courseImage": "https://live.staticflickr.com/65535/48732780891_8611957ece_b.jpg",
+      "registrationFee": 800,
+      "courseFee": 12000,
+      "semester": {
+        "sem": [
+          {
+            "paper": [
+              {
+                "name": "1: BASIC OF TWO WHEELERS",
+                "courseCode": "20TWMV0101",
+                "credits": {
+                  "theory": 3,
+                  "practicals": 3,
+                  "marks": 100
+                },
+                "description": {
+                  "Objectives": "The main purpose of this course is to make acquainted with the Workshop situation and also to provide the students opportunities to get know about the basics of the two wheeler servicing workshop and its environment.",
+                  "Unit I": "Introduction",
+                  "Unit II": "Chassis of Two Wheelers",
+                  "Unit III": "Engine",
+                  "Unit IV": "Suspension, Brakes and Tyres",
+                  "Unit V": "Electrical Systems and Safety Precautions"
+                }
               },
-              "description": {
-                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
-                "Unit I": "Basic Checkup",
-                "Unit II": "Inlet problems",
-                "Unit III": "Starting Problems",
-                "Unit IV": "Engine Assembly",
-                "Unit V": "Clutch Assembly"
-              }
-            },
-            {
-              "name": "2: MAJOR SYSTEMS IN TWO WHEELERS",
-              "courseCode": "16TWMV0102",
-              "credits": {
-                "theory": 3,
-                "practicals": 3,
-                "marks": 100
+              {
+                "name": "2: MAJOR SYSTEMS IN TWO WHEELERS",
+                "courseCode": "16TWMV0102",
+                "credits": {
+                  "theory": 3,
+                  "practicals": 3,
+                  "marks": 100
+                },
+                "description": {
+                  "Objectives": "The course aims to provide knowledge on the major systems in Two-Wheelers and also its functions, break-down and trouble shooting.",
+                  "Unit I": "Types of Two wheelers",
+                  "Unit II": "Components of Power System",
+                  "Unit III": "Chassis& Sub systems",
+                  "Unit IV": "Brakes & Wheels",
+                  "Unit V": "Two Wheeler workshop structure"
+                }
               },
-              "description": {
-                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
-                "Unit I": "Basic Checkup",
-                "Unit II": "Inlet problems",
-                "Unit III": "Starting Problems",
-                "Unit IV": "Engine Assembly",
-                "Unit V": "Clutch Assembly"
-              }
-            },
-            {
-              "name": "3:GENERAL CHECKUP FOR TWO WHEELERS",
-              "courseCode": "16TWMV0103",
-              "credits": {
-                "theory": 3,
-                "practicals": 3,
-                "marks": 100
+              {
+                "name": "3:GENERAL CHECKUP FOR TWO WHEELERS",
+                "courseCode": "16TWMV0103",
+                "credits": {
+                  "theory": 3,
+                  "practicals": 3,
+                  "marks": 100
+                },
+                "description": {
+                  "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
+                  "Unit I": "Basic Checkup",
+                  "Unit II": "Inlet problems",
+                  "Unit III": "Starting Problems",
+                  "Unit IV": "Engine Assembly",
+                  "Unit V": "Clutch Assembly"
+                }
               },
-              "description": {
-                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
-                "Unit I": "Basic Checkup",
-                "Unit II": "Inlet problems",
-                "Unit III": "Starting Problems",
-                "Unit IV": "Engine Assembly",
-                "Unit V": "Clutch Assembly"
-              }
-            },
-            {
-              "name": "4:ASSEMBLIES AND AUTO-ELECTRICAL",
-              "courseCode": "16TWMV0103",
-              "credits": {
-                "theory": 3,
-                "practicals": 3,
-                "marks": 100
+              {
+                "name": "4:ASSEMBLIES AND AUTO-ELECTRICAL",
+                "courseCode": "16TWMV0104",
+                "credits": {
+                  "theory": 3,
+                  "practicals": 3,
+                  "marks": 100
+                },
+                "description": {
+                  "Objectives": "The course aims at introducing the basic knowledge of auto-electrical system. Provide opportunity to learn servicing by hands-on-experience in the industrial setting through electrical instruments.",
+                  "Unit I": "Basic Electricals",
+                  "Unit II": "Battery",
+                  "Unit III": "Engine Electricals",
+                  "Unit IV": "Sensors",
+                  "Unit V": "Auxiliary Units"
+                }
               },
-              "description": {
-                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
-                "Unit I": "Basic Checkup",
-                "Unit II": "Inlet problems",
-                "Unit III": "Starting Problems",
-                "Unit IV": "Engine Assembly"
+              {
+                "name": "5: CUSTOMER RELATIONSHIP MANAGEMENT",
+                "courseCode": "16TWMV0105",
+                "credits": {
+                  "theory": 4,
+                  "practicals": 2,
+                  "marks": 100
+                },
+                "description": {
+                  "Objectives": "To enable the students by providing basic skills required for maintaining good relationship with customers through effective Communication in service sector.",
+                  "Unit I": "Introduction to Customer Support",
+                  "Unit II": "Communication Skills for Customer Support",
+                  "Unit III": "Customer Relationship Skills",
+                  "Unit IV": "Personality Traits in delivering Service",
+                  "Unit V": "Practical Exercise"
+                }
               }
-            }
-          ]
-        },
-        {
-          "paper": [
-            {
-              "name": "6: INDUSTRIAL PLACEMENT FOR HANDS-ON-EXPERIENCE",
-              "courseCode": "16TWMV0103",
-              "credits": {
-                "credit": 30
+            ]
+          },
+          {
+            "paper": [
+              {
+                "name": "6: INDUSTRIAL PLACEMENT FOR HANDS-ON-EXPERIENCE",
+                "courseCode": "16TWMV0206",
+                "credits": {
+                  "credit": 30
+                },
+                "marks": 100,
+                "description": {
+                  "Objectives": "To provide practical training in the industrial environment to the students and create opportunity to gain Hands-on-Experience.",
+                  "Unit I": "Basic Checkup",
+                  "Unit II": "Inlet problems",
+                  "Unit III": "Starting Problems",
+                  "Unit IV": "Engine Assembly",
+                  "Unit V": "Clutch Assembly"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "courseName": "Training Course In Electric Vehicle Technologies",
+      "courseImage": "https://www.pewtrusts.org/-/media/post-launch-images/2017/09/sln_sep11/sln_sep11_16x9.jpg",
+      "registrationFee": null,
+      "courseFee": null,
+      "semester": {
+        "sem": [
+          {
+            "paper": [
+              {
+                "name": "1: Introduction & Technology Trends",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Global Automotive Technology Trends ",
+                  "Unit II": "Global Electric Vehicle Trends",
+                  "Unit III": "ICE to EV Migration",
+                  "Unit IV": "“Well to Wheel” Analysis",
+                  "Unit V": "Big Picture & Tier 1 Analysis"
+                }
               },
-              "marks": 100,
-              "description": {
-                "Objectives": "The course aims to provide knowledge repairing and servicing Two-Wheelers and also its functions, break-down, overhauling and trouble shooting.",
-                "Unit I": "Basic Checkup",
-                "Unit II": "Inlet problems",
-                "Unit III": "Starting Problems",
-                "Unit IV": "Engine Assembly",
-                "Unit V": "Clutch Assembly"
+              {
+                "name": "2: EV Direction & EV Architectures",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "What is changing (for all vehicle sub-systems)",
+                  "Unit II": "Electric Drive Technologies",
+                  "Unit III": "CO2 Impact on NEDC",
+                  "Unit IV": "EV Architectures",
+                  "Unit V": "Case Study",
+                  "Unit VI": "Chargers"
+                }
+              },
+              {
+                "name": "3:REM’s / EV Motors",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Motor Types & Construction",
+                  "Unit II": "Advantages & Disadvantages ",
+                  "Unit III": "Motor Sizing & Characterization",
+                  "Unit IV": "Motor Components",
+                  "Unit V": "Motor Design & Optimization",
+                  "Unit VI": "Future of e-Motors",
+                  "Unit VII": "Specific Energies of Lead /Nickel/ Lithium based batteries"
+                }
+              },
+              {
+                "name": "4:Hybrid Transmissions & BEV Transmissions ",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "EV Transmission Architecture",
+                  "Unit II": "EV Transmission Trends",
+                  "Unit III": "DHT’s (Dedicated Hybrid Transmissions)",
+                  "Unit IV": "BEV Transmissions",
+                  "Unit V": "Case Study",
+                  "Unit VI": "Examples"
+                }
+              },
+              {
+                "name": "5:Battery",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Materials",
+                  "Unit II": "Different Cell Chemistries",
+                  "Unit III": "Construction",
+                  "Unit IV": "Performance Characteristics",
+                  "Unit V": "Safety Standards",
+                  "Unit VI": "Definitions",
+                  "Unit VII": "Performance / Degradation / Failure Modes",
+                  "Unit VIII": "Case Studies"
+                }
+              },
+              {
+                "name": "6:BMS",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Architecture",
+                  "Unit II": "Thermal Management",
+                  "Unit III": "SOC/SOH Measurement Methods",
+                  "Unit IV": "Cell Balancing",
+                  "Unit V": "Market Trends",
+                  "Unit VI": "Cost Comparison – ICE Vs EV",
+                  "Unit VII": "Case Studies (Mahindra & Tesla)",
+                  "Unit VIII": "Specific Energies of Lead /Nickel/ Lithium based batteries"
+                }
+              },
+              {
+                "name": "7:EV Motor Components & Calibration",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Converters / Controllers / Inverters",
+                  "Unit II": "Why Calibration & Calibration Objectives",
+                  "Unit III": "Case Study",
+                  "Unit IV": "Motor Sensors",
+                  "Unit V": "Control Strategies"
+                }
+              },
+              {
+                "name": "8:EV Integration",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Objectives": null,
+                  "Unit I": "System Integration",
+                  "Unit II": "Electrical Integration",
+                  "Unit III": "Powertrain NVH",
+                  "Unit IV": "EV Drivetrain Control",
+                  "Unit V": "Battery & Motor Thermal Cooling",
+                  "Unit VI": "EV Safety "
+                }
+              },
+              {
+                "name": "9:Regulations",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "EV Regulations",
+                  "Unit II": "Certification / Homologation Procedures",
+                  "Unit III": "Product Requirements & Specifications (Battery / Other Components / Safety / Reliability / Durability etc.)"
+                }
+              },
+              {
+                "name": "10:Vehicle Specific EV Technologies & Adaptations",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Two Wheeler",
+                  "Unit II": "3 Wheeler",
+                  "Unit III": "Passenger Cars",
+                  "Unit IV": "Commercial Vehicles",
+                  "Unit V": "Buses",
+                  "Unit VI": "Off Highway Vehicles",
+                  "Unit VII": "Tractors "
+                }
+              },
+              {
+                "name": "11:High Voltage Systems & Safety",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Legal requirement and qualification trainings",
+                  "Unit II": "Basic modules to cover – resistance, inductance and capacitor from High voltage perspective.",
+                  "Unit III": "IP safety, symbols and signs",
+                  "Unit IV": "HV interlock lines",
+                  "Unit VI": "Battery module level working and pack handling",
+                  "Unit VII": "Converter used in High Voltage electric vehicle and its handling",
+                  "Unit VIII": "Determination of insulation resistance",
+                  "Unit IX": "Taking care of EMI while working on high voltage battery or system",
+                  "Unit X": "Inverter DC bus capacitor discharge handling for safety",
+                  "Unit XI": "Measuring instruments spec for HV EV",
+                  "Unit XII": "Working on faults and isolating vehicle for safety",
+                  "Unit XIII": "Road side recovery and assistance",
+                  "Unit XIV": "Charging systems and voltage",
+                  "Unit XV": "BMS role in protection and safety for HV and fault handling",
+                  "Unit XVI": "Battery bus bar and links to reduce voltage to perform work or handle it",
+                  "Unit XVII": "Specific Energies of Lead /Nickel/ Lithium based batteries"
+                }
+              },
+              {
+                "name": "12:Battery Charging",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Types of Charging",
+                  "Unit II": "Charger Types - Slow, Rapid, Fast, Ultra Fast Equalizing Charge",
+                  "Unit III": "Charging Protocols",
+                  "Unit IV": "Charging With A Power Supply",
+                  "Unit V": "Charging and High and Low Temperatures",
+                  "Unit VI": "Charging Infrastructure in USA, Europe, China & India",
+                  "Unit VII": "Challenges",
+                  "Unit VIII": "Upcoming Charging Technologies"
+                }
+              },
+              {
+                "name": "13:Battery Testing and Validation",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "State of Charge Determination – Direct Method, Indirect Method, Hybrid Methods",
+                  "Unit II": "Measuring Internal Resistance, CCA, SoC, Capacity",
+                  "Unit III": "Testing Starter Batteries",
+                  "Unit IV": "Testing Nickel-based batteries",
+                  "Unit V": "Testing Lithium Based Batteries",
+                  "Unit VI": "Battery Rapid Test Methods"
+                }
+              },
+              {
+                "name": "14:EV Simulation (vehicle Level)",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "EV Vehicle Simulation",
+                  "Unit II": "Component Sizing",
+                  "Unit III": "Vehicle Range Calculations",
+                  "Unit IV": "Simulating Battery & Motor Performance on 1D simulation ",
+                  "Unit V": "Vehicle Modes "
+                }
               }
-            }
-          ]
-        }
-      ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "courseName": "Training Course In Data Entry Operator",
+      "courseImage": "https://media-exp1.licdn.com/dms/image/C4D1BAQE0B9ieFDbbLg/company-background_10000/0?e=2159024400&v=beta&t=NpptNmLTMiUM_Y40Jgk5dNSSWuYh_WpvwrDHMDSuiaA",
+      "registrationFee": null,
+      "courseFee": null,
+      "semester": {
+        "sem": [
+          {
+            "paper": [
+              {
+                "name": "1:Basic of Computers",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Computer Organization",
+                  "Unit II": "Input and Output Devices",
+                  "Unit III": "System Software and Application Software",
+                  "Unit IV": "Computer Language",
+                  "Unit V": "Compiler and assembler "
+                }
+              },
+              {
+                "name": "2:Operating System",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Elements of Windows OS",
+                  "Unit II": "Desktop Elements",
+                  "Unit III": "Locating Files and Folders",
+                  "Unit IV": "Changing System Setting ",
+                  "Unit V": "File Management in Windows",
+                  "Unit VI": "Installation of software and Hardware"
+                }
+              },
+              {
+                "name": "3:Basics of Word processing",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Starting Word Program",
+                  "Unit II": "Word Screen Layout",
+                  "Unit III": "Managing Documents",
+                  "Unit IV": "Protecting and Finding Documents",
+                  "Unit V": "Printing Documents"
+                }
+              },
+              {
+                "name": "4:Formatting Documents",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Working with Text",
+                  "Unit II": "Formatting Text",
+                  "Unit III": "Formatting Paragraphs",
+                  "Unit IV": "Bulleted and Numbered Lists",
+                  "Unit V": "Copying and Moving Text",
+                  "Unit VI": "Spelling and Grammar",
+                  "Unit VII": "Page Formatting",
+                  "Unit VIII": "Creating Tables"
+                }
+              },
+              {
+                "name": "5:Mail Merge",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Mail Merge",
+                  "Unit II": "Creating Data Source",
+                  "Unit III": "Creating Mailing Labels",
+                  "Unit IV": "Merging Data into Main Document"
+                }
+              },
+              {
+                "name": "6:Basics of Spreadsheet",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Selecting, Adding and Renaming Worksheets",
+                  "Unit II": "Modifying Worksheet",
+                  "Unit III": "Resizing Rows and Columns",
+                  "Unit IV": "Workbook Protection",
+                  "Unit V": "Vehicle Modes "
+                }
+              },
+              {
+                "name": "7:Formatting Worksheets",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Formatting Toolbar",
+                  "Unit II": "Formatting Cells",
+                  "Unit III": "Formatting Rows and Columns",
+                  "Unit IV": "Formatting Worksheets Using Styles",
+                  "Unit V": "Protect and Unprotect Worksheets"
+                }
+              },
+              {
+                "name": "8:Formulas Functions and Charts",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Formulas and Functions",
+                  "Unit II": "Copying a Formula",
+                  "Unit III": "Types of Functions",
+                  "Unit IV": "Types of Charts",
+                  "Unit V": "Auto Shapes and Smart Arts"
+                }
+              },
+              {
+                "name": "9:Creating Presentation",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Creating Slides",
+                  "Unit II": "Creating Shorter View",
+                  "Unit III": "Changing Slides Layouts",
+                  "Unit IV": "Moving between Slides"
+                }
+              },
+              {
+                "name": "10:Introduction to Internet",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Getting Connected to Internet",
+                  "Unit II": "Types of Internet Connections",
+                  "Unit III": "Internet Terminology",
+                  "Unit IV": "Understanding Internet Address",
+                  "Unit V": "Web Browser and Internet Services"
+                }
+              },
+              {
+                "name": "11:Confidentiality and treatment of sensitive data",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Confidential Data",
+                  "Unit II": "Private Data",
+                  "Unit III": "Public Data"
+                }
+              },
+              {
+                "name": "12:The Data Protection",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "How to protect Sensitive Data",
+                  "Unit II": "How to dispose sensitive data",
+                  "Unit III": "Data Sanitization",
+                  "Unit IV": "Additional Guidelines"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "courseName": "Training Course In Maintenance Supervisor",
+      "courseImage": "https://www.onupkeep.com/answers/wp-content/uploads/2019/09/Maintenance-Supervisor.jpg",
+      "registrationFee": null,
+      "courseFee": null,
+      "semester": {
+        "sem": [
+          {
+            "paper": [
+              {
+                "name": "1:Maintenance Organization",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Types of Maintenance Organization",
+                  "Unit II": "Maintenance Planning and Operations",
+                  "Unit III": "Work Order Systems",
+                  "Unit IV": "Using Information Sources",
+                  "Unit V": "Controlling Backlog through Planning",
+                  "Unit VI": "Applying Work Standards",
+                  "Unit VII": "Managing Maintenance by Computer"
+                }
+              },
+              {
+                "name": "2:Implementing Preventive Maintenance",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "The Need for PM",
+                  "Unit II": "Setting Up a PM Program",
+                  "Unit III": "Scheduling PM",
+                  "Unit IV": "Controlling Work",
+                  "Unit V": "Quality Control"
+                }
+              },
+              {
+                "name": "3:Controlling Maintenance Resources",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Measuring Workload",
+                  "Unit II": "Controlling Labor",
+                  "Unit III": "Controlling Parts and Materials",
+                  "Unit IV": "Managing Shop Operations",
+                  "Unit VI": "Controlling Costs through Budgeting"
+                }
+              },
+              {
+                "name": "4:Improving Performance in Maintenance",
+                "courseCode": null,
+                "credits": {
+                  "theory": null,
+                  "practicals": null,
+                  "marks": null
+                },
+                "description": {
+                  "Unit I": "Evaluating Performance",
+                  "Unit II": "Increasing Productivity"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
-  },
+  ],
   "courses": ["Diploma Course in Two Wheeler Mechanism and Maintenance"],
   "traningLocations": ["Kashipur"]
 }

@@ -1,5 +1,5 @@
 export const constants = {
   header: {
-    height: 50
+    height: 40
   }
 }

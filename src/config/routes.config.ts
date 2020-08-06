@@ -2,9 +2,10 @@ import { ForgotPassword, Login, LoginMobileOTP, Register } from '../modules/Auth
 import Logout from '../modules/Auth/containers/Logout'
 import Home from '../modules/Home/container/Home'
 import AboutUs from '../modules/AboutUs/container/AboutUs'
-import CourseContent from '../modules/CourseContent'
+// import CourseContent from '../modules/CourseContent'
 import Userprofile from '../modules/User/containers/UserProfile'
-// import CourseContent from '../modules/CourseContent/container/CourseContent'
+import Courses from '../modules/Courses/container/Courses'
+import CourseContent from '../modules/CourseContent/container/CourseContent'
 
 
 // Leave Label Empty If you don't want it in SideBar Item
@@ -19,8 +20,9 @@ export const RoutesPath = {
   Logout: '/logout',
   ForgotPassword: '/forgot-password',
   AboutUs: '/aboutUs',
-  Course: '/course',
-  UserProfile: '/userProfile'
+  Courses: '/courses',
+  CourseContent: '/course-content',
+  // UserProfile: '/userProfile'
 
 }
 
@@ -109,6 +111,42 @@ export const routesConfig: any = [
     link: RoutesPath.AboutUs,
     path: RoutesPath.AboutUs
   },
+  // {
+  //   authenticated: false,
+  //   bLabel: '',
+  //   children: undefined,
+  //   component: CourseContent,
+  //   exact: true,
+  //   icon: undefined,
+  //   label: '',
+  //   layout: ['header', 'footer'],
+  //   link: RoutesPath.CourseContent,
+  //   path: RoutesPath.CourseContent
+  // },
+  // {
+  //   authenticated: false,
+  //   bLabel: '',
+  //   children: undefined,
+  //   component: Userprofile,
+  //   exact: true,
+  //   icon: undefined,
+  //   label: '',
+  //   layout: ['header', 'footer'],
+  //   link: RoutesPath.UserProfile,
+  //   path: RoutesPath.UserProfile
+  // },
+  {
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    component: Courses,
+    exact: true,
+    icon: undefined,
+    label: '',
+    layout: ['header', 'footer'],
+    link: RoutesPath.Courses,
+    path: RoutesPath.Courses
+  },
   {
     authenticated: false,
     bLabel: '',
@@ -118,19 +156,7 @@ export const routesConfig: any = [
     icon: undefined,
     label: '',
     layout: ['header', 'footer'],
-    link: RoutesPath.Course,
-    path: RoutesPath.Course
-  },
-  {
-    authenticated: false,
-    bLabel: '',
-    children: undefined,
-    component: Userprofile,
-    exact: true,
-    icon: undefined,
-    label: '',
-    layout: ['header', 'footer'],
-    link: RoutesPath.UserProfile,
-    path: RoutesPath.UserProfile
+    link: `${RoutesPath.CourseContent}`,
+    path: `${RoutesPath.CourseContent}/:courseId`
   }
 ]

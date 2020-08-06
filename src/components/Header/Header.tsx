@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, styled, Button, Link, Label, Span } from '@icstark/ui'
-import jump2join from '../../assets/jump2join.jpeg'
+import jump2join from '../../assets/jump2joinlogo.png'
 import { RoutesPath } from '../../config/routes.config'
 import ContactUs from '../../modules/ContactUs/container/ContactUs'
 import { LogInOutButton, UserMenuLink, UserProfileMenu } from './styled'
@@ -13,39 +13,39 @@ function Header(props: any) {
   const user = JSON.parse(localStorage.getItem('user') || '{"firstName": "Guest"}')
   const isLoggedin = storage && storage
 
-  const LoggedInMenu = () => {
-    return (
-      <UserMenuLink style={{ marginRight: '60px' }}>
-        <Span
-          onClick={(e: any) => {
-            e.preventDefault()
-            setMenuToggle(!menuToggle)
-          }}
-        >
-          <FaUserCircle size={25} style={{ marginRight: 10 }} />
-          <Label>Hi! {user.firstName || 'Guest'}</Label>
-        </Span>
-        {menuToggle ? (
-          <UserProfileMenu>
-            <Link to={RoutesPath.HOME}>Home</Link>
-            <Link to={RoutesPath.UserProfile}>Profile</Link>
-            <Link to={RoutesPath.Logout}>Log Out</Link>
-          </UserProfileMenu>
-        ) : null}
-      </UserMenuLink>
-    )
-  }
+  // const LoggedInMenu = () => {
+  //   return (
+  //     <UserMenuLink style={{ marginRight: '60px' }}>
+  //       <Span
+  //         onClick={(e: any) => {
+  //           e.preventDefault()
+  //           setMenuToggle(!menuToggle)
+  //         }}
+  //       >
+  //         <FaUserCircle size={25} style={{ marginRight: 10 }} />
+  //         <Label>Hi! {user.firstName || 'Guest'}</Label>
+  //       </Span>
+  //       {menuToggle ? (
+  //         <UserProfileMenu>
+  //           <Link to={RoutesPath.HOME}>Home</Link>
+  //           <Link to={RoutesPath.UserProfile}>Profile</Link>
+  //           <Link to={RoutesPath.Logout}>Log Out</Link>
+  //         </UserProfileMenu>
+  //       ) : null}
+  //     </UserMenuLink>
+  //   )
+  // }
 
   return (
     <Flex justifyContentSpaceBetween alignItemsCenter>
       <Flex alignItemsCenter>
         <Link to="/">
-          <img style={{ height: 70, width: 'auto' }} src={jump2join} alt="logo" />
+          <img style={{ height: 30, width: 'auto' }} src={jump2join} alt="logo" />
         </Link>
       </Flex>
       <Flex>
         <Flex style={{ paddingRight: '15px' }}>
-          <Link to={RoutesPath.Course}>Courses</Link>
+          <Link to={RoutesPath.Courses}>Courses</Link>
         </Flex>
         <Flex style={{ paddingRight: '15px' }}>
           <Link to={RoutesPath.AboutUs}>About Us</Link>
@@ -57,7 +57,7 @@ function Header(props: any) {
             <ContactUs />
           </div>
         </Flex>
-        <Flex>
+        {/* <Flex>
           {isLoggedin ? (
             <LoggedInMenu />
           ) : (
@@ -65,7 +65,7 @@ function Header(props: any) {
               LOG IN
             </LogInOutButton>
           )}
-        </Flex>
+        </Flex> */}
       </Flex>
     </Flex>
   )

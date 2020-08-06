@@ -16,11 +16,14 @@ const Sem = (a: any) => {
   return data
 }
 
-// function CourseContent(props: any) {
-function CourseContent() {
+function CourseContent(props: any) {
+  const path = props.history.location.pathname
+  const id = path.split('/')
+  // console.log(id)
   return (
     <Section>
-      <H2Heading>Course Content</H2Heading>
+      {/* <H2Heading>Course Content</H2Heading> */}
+      <H2Heading>{data.courseContent[id[2]].courseName}</H2Heading>
       <Flex
         justifyContentCenter
         alignItemsCenter
@@ -38,7 +41,7 @@ function CourseContent() {
             justifyContentSpaceBetween
             alignItemsCenter
           >
-            <img src={data.courseContent.courseImage} style={{ width: '100%', borderRadius: 10 }} />
+            {/* <img src={data.courseContent.courseImage} style={{ width: '100%', borderRadius: 10 }} /> */}
           </Flex>
           <Flex
             width={[1, 0.5]}
@@ -47,20 +50,67 @@ function CourseContent() {
             justifyContentCenter
           >
             <Span fontSize={16} color={'#808184'} style={{ margin: 5, fontWeight: 500 }}>
-              {data.courseContent.courseName}
+              {/* {data.courseContent.courseName} */}
             </Span>
             <Span fontSize={14} color={'#959595'} style={style}>
-              Registration Fee: Rs.{data.courseContent.registrationFee}
+              {/* Registration Fee: Rs.{data.courseContent.registrationFee} */}
             </Span>
             <Span fontSize={14} color={'#959595'} style={style}>
-              Course Fee: Rs.{data.courseContent.courseFee}
+              {/* Course Fee: Rs.{data.courseContent.courseFee} */}
             </Span>
           </Flex>
         </Flex>
-        {Sem(data.courseContent.semester.sem)}
+        {Sem(data.courseContent[id[2]].semester.sem)}
       </Flex>
     </Section>
   )
 }
+
+// function CourseContent(props: any) {
+// function CourseContent() {
+//   return (
+//     <Section>
+//       <H2Heading>Course Content</H2Heading>
+//       <Flex
+//         justifyContentCenter
+//         alignItemsCenter
+//         wrap
+//         column
+//         width={0.9}
+//         style={{ margin: '0 auto' }}
+//       >
+//         <Flex wrap justifyContentSpaceBetween style={{ boxSizing: 'border-box' }}>
+//           <Flex
+//             width={[1, 0.5]}
+//             style={{ boxSizing: 'border-box' }}
+//             className="semester"
+//             column
+//             justifyContentSpaceBetween
+//             alignItemsCenter
+//           >
+//             <img src={data.courseContent.courseImage} style={{ width: '100%', borderRadius: 10 }} />
+//           </Flex>
+//           <Flex
+//             width={[1, 0.5]}
+//             style={{ padding: 20, boxSizing: 'border-box' }}
+//             column
+//             justifyContentCenter
+//           >
+//             <Span fontSize={16} color={'#808184'} style={{ margin: 5, fontWeight: 500 }}>
+//               {/* {data.courseContent.courseName} */}
+//             </Span>
+//             <Span fontSize={14} color={'#959595'} style={style}>
+//               Registration Fee: Rs.{data.courseContent.registrationFee}
+//             </Span>
+//             <Span fontSize={14} color={'#959595'} style={style}>
+//               Course Fee: Rs.{data.courseContent.courseFee}
+//             </Span>
+//           </Flex>
+//         </Flex>
+//         {Sem(data.courseContent.semester.sem)}
+//       </Flex>
+//     </Section>
+//   )
+// }
 
 export default CourseContent

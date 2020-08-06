@@ -4,11 +4,6 @@ import { FaEnvelope, FaMobile, FaUserCircle, FaCheckCircle } from 'react-icons/f
 import { Section, SubSection, UserProfile, Profile, Details, UserCourse } from '../styled'
 import CourseContent from '../../CourseContent'
 
-// import { Section, SubSection } from '../../../style/styled'
-// import { Details, Profile, UserProfile } from '../styled'
-// import ManageAddress from './ManageAddress'
-// import ManageVehicle from './ManageVehicle'
-
 export const capitalize = (string: any) => {
   return string[0].toUpperCase() + string.slice(1)
 }
@@ -28,7 +23,7 @@ function Userprofile() {
 
   return (
     <Section>
-      <SubSection style={{ padding: '50px 0', width: '100% ! important' }}>
+      <SubSection style={{ padding: '50px 0' }}>
         <UserProfile>
           <Flex
             width={[1, 0.2]}
