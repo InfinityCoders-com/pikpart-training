@@ -1,78 +1,70 @@
 import React from 'react'
-import { Flex } from '@icstark/ui'
-import { FaThumbsUp } from 'react-icons/fa'
+import { Flex, styled } from '@icstark/ui'
+import { FaThumbsUp, FaUserCircle } from 'react-icons/fa'
+import {
+  RecruitContainer,
+  RecruitHeading,
+  RecruitBody,
+  CandidateXp,
+  CandidateName
+} from '../styled'
+
+const recruiterTalk = [
+  {
+    review:
+      'Jump2Join provides multiple interactive training programs. They are unique, and first, of its own kind, expert-guided workshops, classroom training and live system training help the trainee in both practical and vocational development. These training are certified and efficient to fine-tune the skills and help candidates grow in their respective industries. Jump2Join train the people with a vision of shaping their future.',
+    author: 'Mayank Awasthi',
+    position: 'Director, Oorjagram India P. Ltd.'
+  },
+  {
+    review:
+      'Jump2Join has been an outstanding partner in supporting the development of a Ratnashil online Services P Ltd workforce like providing expert mechanics, trained supervisors, efficient computer operators, and etc. They have been highly responsive, helpful beyond the scope of the contract, and highly professional in responding to feedback and offering recommendations for improvement.',
+    author: 'Sweta Goel',
+    position: 'HR Manager, Ratnasheel Online Services P. Ltd'
+  },
+  {
+    review:
+      'All of the feedback I have had from the Jump2Join attendees has been extremely positive – with individuals complimenting how relevant and useful the training material covered was. I hope that this should make a real difference to the level of Customer Services we are able to provide to our customers.',
+    author: 'Pravesh Kumar',
+    position: ' Director, Bollards Security Pvt Ltd'
+  }
+]
 
 function RecruitersTalk() {
   return (
-    <Flex
-      justifyContentSpaceBetween
-      alignItemsCenter
-      style={{
-        margin: '25px 0px',
-        boxShadow: 'rgb(204, 204, 204) 0 0 2px',
-        borderRadius: '5px',
-        padding: ' 10px'
-      }}
-    >
-      <div style={{ paddingTop: '7px', width: '15%', fontWeight: 500, color: '#676767' }}>
-        RECRUITER'S TALK
-      </div>
-      {/* <div
-        style={{
-          width: '85%',
-          overflowX: 'auto',
-          overflowY: 'hidden',
-          display: '-webkit-inline-box'
-        }}
-      >
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-        <FaThumbsUp style={{ fontSize: '30px', width: '100px' }} />
-      </div> */}
-      <div style={{ width: '25%' }}>
-        <iframe
-          src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          style={{ width: '100%', height: 'auto', border: 'none' }}
-        />
-      </div>
-      <div style={{ width: '25%' }}>
-        <iframe
-          src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          style={{ width: '100%', height: 'auto', border: 'none' }}
-        />
-      </div>
-      <div style={{ width: '25%' }}>
-        <iframe
-          src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          style={{ width: '100%', height: 'auto', border: 'none', margin: '0 auto' }}
-        />
-      </div>
-      {/* <div style={{ width: '25%' }}>
-        <iframe
-          src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          style={{ width: '100%', height: 'auto', border: 'none', margin: '0 auto' }}
-        />
-      </div>
-      <div style={{ width: '25%' }}>
-        <iframe
-          src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          style={{ width: '100%', height: 'auto', border: 'none', margin: '0 auto' }}
-        />
-      </div> */}
-    </Flex>
+    <RecruitContainer>
+      <RecruitHeading>RECRUITER'S TALK</RecruitHeading>
+      <RecruitBody>
+        {/* <div>
+          <iframe
+            src="https://www.youtube.com/embed/Nwhl1Mq0eGk"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            style={{ width: 'auto', height: '100', border: 'none', margin: '10px 20px' }}
+          />
+        </div> */}
+        {recruiterTalk.map((content: any, i: number) => {
+          return (
+            <div key={i}>
+              <div style={{ width: '500px', height: 'auto', margin: '10px 20px' }}>
+                <CandidateXp>{content.review}</CandidateXp>
+                <Flex
+                  justifyContentFlexStart
+                  alignItemsCenter
+                  style={{ height: '20%', marginTop: '10px' }}
+                >
+                  <Flex>
+                    <FaUserCircle style={{ fontSize: '30px' }} />
+                  </Flex>
+                  <CandidateName alignItemsCenter>
+                    {content.author},{content.position}
+                  </CandidateName>
+                </Flex>
+              </div>
+            </div>
+          )
+        })}
+      </RecruitBody>
+    </RecruitContainer>
   )
 }
 export default RecruitersTalk

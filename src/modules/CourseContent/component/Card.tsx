@@ -19,6 +19,7 @@ const Body = styled(Flex)`
   background: #fff;
   bottom: 0;
   padding: 10px;
+  overflow: hidden;
 `
 
 const Title = styled(Span)`

@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Span } from '@icstark/ui'
 import Papers from './Papers'
 import Card from './Card'
+// import content from '../../../data.json'
 
 export const Paper = (a: any) => {
   const data = a.map((item: any, i: any) => {
@@ -26,6 +27,10 @@ function Semester(props: any) {
       }}
       alignItemsCenter
     >
+      {/* {content.courseContent.courseName ===
+      'Diploma Course in Two Wheeler Mechanism and Maintenance' ? (
+        <Card head title={`Semester ${sem}`} />
+      ) : null} */}
       <Card head title={`Semester ${sem}`} />
       {Paper(data.paper)}
     </Flex>

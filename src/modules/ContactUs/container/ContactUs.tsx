@@ -1,20 +1,53 @@
 import React from 'react'
 import { Flex, Span, Input, Button, styled } from '@icstark/ui'
-import { FaPhone } from 'react-icons/fa'
+// import { FaPhone } from 'react-icons/fa'
 import { Modal } from '@icstark/ui'
-import { LabelValue } from '../../ContactRegister/container/ContactRegister'
+// import { LabelValue } from '../../ContactRegister/container/ContactRegister'
 import { FaRegEnvelope, FaMobileAlt, FaWhatsapp, FaMapMarkedAlt } from 'react-icons/fa'
 import { FormInput } from '../../../components/Forms/Form'
+import { ContactUsContainer, ContactInfo } from '../styled'
 
-const ContactUsContainer = styled(Flex)`
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  margin: 40px auto;
-  @media (max-width: 540px) {
-    flex-wrap: wrap;
-  }
-`
+const style = {
+  color: '#333',
+  fontWeight: 400,
+  marginBottom: '11px'
+}
+
+export const LabelValue = ({ label, value, icon }: any) => {
+  return (
+    <Flex style={style} alignItemsCenter>
+      <Flex style={{ width: 50 }}>
+        {icon || (
+          <Span
+            variant="default"
+            fontSize={18}
+            color={`rgba(0,0,0,0.65)`}
+            style={{ fontWeight: 600 }}
+          >
+            {label + `:`}
+          </Span>
+        )}
+      </Flex>
+      <Flex column>
+        {label === 'Address'
+          ? value.split(',').map((item: any, i: any) => {
+              return (
+                <Span color={`#676767`} fontSize={14} key={`${i}`}>
+                  {item}
+                  {i < value.split(',').length - 1 && ','}
+                </Span>
+              )
+            })
+          : (
+              <Span color={`#676767`} fontSize={14}>
+                {value}
+              </Span>
+            ) || null}
+      </Flex>
+    </Flex>
+  )
+}
+
 const Phone = styled(FaMobileAlt)`
   color: ${(props: any) => props.theme.colors.primary};
 `
@@ -72,22 +105,22 @@ function ContactUs() {
         Contact Us
       </div>
       <Modal
-        variant="l Left-Center"
+        variant="m Left-Center"
         toggleModal={modal.show}
         setToggleModal={() => setModal({ ...modal, show: false })}
       >
         <ContactUsContainer>
-          <Flex width={[1, 0.8]} column>
+          <ContactInfo>
             <LabelValue label="Email" value="jump2join@gmail.com" icon={<Email size={35} />} />
-            <LabelValue label="WhatsApp" value="+91-786060980" icon={<WhatsApp size={35} />} />
+            <LabelValue label="WhatsApp" value="+91-7800660980" icon={<WhatsApp size={35} />} />
             <LabelValue label="Phone" value="+91-9027914008" icon={<Phone size={35} />} />
             <LabelValue
               label="Address"
               icon={<Map size={35} />}
               value="Jump2Join Training Center, Aliganj Road Tanda Ujjain, Kashipur - 244713"
             />
-          </Flex>
-          <Flex width={[1, 0.8]} column>
+          </ContactInfo>
+          <ContactInfo>
             <div
               style={{
                 textAlign: 'center',
@@ -149,7 +182,7 @@ function ContactUs() {
                 CONTACT US
               </Button>
             </div>
-          </Flex>
+          </ContactInfo>
         </ContactUsContainer>
       </Modal>
     </>

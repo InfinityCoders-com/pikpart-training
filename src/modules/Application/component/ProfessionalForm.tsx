@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Span, Button } from '@icstark/ui'
 import { Modal } from '@icstark/ui'
 import { FormInput, FormSelect } from '../../../components/Forms/Form'
-import { FaSearch } from 'react-icons/fa'
+import { FaSearch, FaHandshake } from 'react-icons/fa'
 import { FormContainer } from './CertificateForm'
 function ProfessionalForm() {
   const [modal, setModal] = React.useState({
@@ -31,7 +31,7 @@ function ProfessionalForm() {
           })
         }
       >
-        <FaSearch style={{ fontSize: '40px', marginBottom: '20px' }} />
+        <FaHandshake style={{ fontSize: '45px', marginBottom: '20px' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px', textAlign: 'center' }}>
           Request
           <br />

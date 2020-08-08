@@ -1,4 +1,4 @@
-import { styled, Input, Button } from '@icstark/ui'
+import { styled, Input, Button, Flex } from '@icstark/ui'
 
 export const MInput = styled(Input)`
   height: 60px;
@@ -21,4 +21,21 @@ export const MTextArea = styled(Input)`
   font-weight: 600;
   padding-bottom: 0;
   padding: 40px;
+`
+export const ContactUsContainer = styled(Flex)`
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 40px auto;
+  @media (max-width: 540px) {
+    flex-wrap: wrap;
+  }
+`
+export const ContactInfo = styled(Flex)`
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 10px;
+  @media (max-width: 540px) {
+    width: 100%;
+  }
 `

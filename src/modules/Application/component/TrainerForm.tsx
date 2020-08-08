@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Span, Button } from '@icstark/ui'
 import { Modal } from '@icstark/ui'
 import { FormInput, FormSelect } from '../../../components/Forms/Form'
-import { FaUser } from 'react-icons/fa'
+import { FaUser, FaUserTie } from 'react-icons/fa'
 import { FormContainer } from './CertificateForm'
 function TrainerForm() {
   const [modal, setModal] = React.useState({
@@ -56,7 +56,7 @@ function TrainerForm() {
           })
         }
       >
-        <FaUser style={{ fontSize: '60px', marginBottom: '20px' }} />
+        <FaUserTie style={{ fontSize: '60px', marginBottom: '20px' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>Apply For Trainer</div>
       </Flex>
       <Modal

@@ -22,7 +22,7 @@ const Map = styled(FaMapMarkedAlt)`
   color: ${(props: any) => props.theme.colors.primary};
 `
 
-export const LabelValue = ({ label, value, icon }: any) => {
+const LabelValue = ({ label, value, icon }: any) => {
   return (
     <Flex style={style} alignItemsCenter>
       <Flex style={{ width: 50 }}>

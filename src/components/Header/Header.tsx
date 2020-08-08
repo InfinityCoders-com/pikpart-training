@@ -48,11 +48,19 @@ function Header(props: any) {
           <Link to={RoutesPath.Courses}>Courses</Link>
         </Flex>
         <Flex style={{ paddingRight: '15px' }}>
-          <Link to={RoutesPath.AboutUs}>About Us</Link>
+          <Link to={RoutesPath.AboutUs} style={{ minWidth: 'max-content' }}>
+            About Us
+          </Link>
         </Flex>
         <Flex style={{ paddingRight: '15px' }}>
           <div
-            style={{ padding: '9px 16px', fontSize: '14px', color: '#1890ff', cursor: 'pointer' }}
+            style={{
+              padding: '9px 16px',
+              fontSize: '14px',
+              color: '#1890ff',
+              cursor: 'pointer',
+              minWidth: 'max-content'
+            }}
           >
             <ContactUs />
           </div>

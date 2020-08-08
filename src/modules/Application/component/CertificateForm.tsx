@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Span, Button, styled } from '@icstark/ui'
-import { FaCertificate } from 'react-icons/fa'
+import { FaCertificate, FaGraduationCap } from 'react-icons/fa'
 import { Modal } from '@icstark/ui'
 import { FormInput, FormSelect } from '../../../components/Forms/Form'
 
@@ -66,7 +66,7 @@ function CertificateForm(props: any) {
           })
         }
       >
-        <FaCertificate style={{ fontSize: '60px', marginBottom: '20px' }} />
+        <FaGraduationCap style={{ fontSize: '60px', marginBottom: '20px' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>
           Apply to Certified
         </div>
