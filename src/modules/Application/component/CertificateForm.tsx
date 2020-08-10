@@ -68,7 +68,7 @@ function CertificateForm(props: any) {
       >
         <FaGraduationCap style={{ fontSize: '60px', marginBottom: '20px' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>
-          Apply to Certified
+          Apply to Get Certified
         </div>
       </Flex>
       <Modal
@@ -85,7 +85,7 @@ function CertificateForm(props: any) {
                 fontSize: 14
               }}
             >
-              Application Form
+              Candidate Registration Form
             </div>
             <Flex
               style={{

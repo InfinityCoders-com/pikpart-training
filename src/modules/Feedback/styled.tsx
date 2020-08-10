@@ -30,7 +30,7 @@ export const TrustedHeading = styled.div`
   }
 `
 export const TrustBrandContainer = styled(Flex)`
-  width: 85%;
+  width: 80%;
   overflow: auto;
   @media (max-width: 540px) {
     width: 100%;
@@ -69,7 +69,7 @@ export const RecruitHeading = styled.div`
 `
 
 export const RecruitBody = styled(Flex)`
-  width: 85%;
+  width: 80%;
   overflow: auto;
   @media (max-width: 540px) {
     width: 100%;

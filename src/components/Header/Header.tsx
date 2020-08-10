@@ -35,6 +35,29 @@ function Header(props: any) {
   //     </UserMenuLink>
   //   )
   // }
+  const HeadingLink = styled(Link)`
+    padding: 9px 16px;
+    min-width: max-content;
+    @media (max-width: 540px) {
+      padding: 3px 6px;
+    }
+  `
+  const HeadingFlex = styled(Flex)`
+    padding-right: 15px;
+    @media (max-width: 540px) {
+      padding-right: 3px;
+    }
+  `
+  const ContactContainer = styled.div`
+    padding: 9px 16px;
+    font-size: 12px;
+    color: #1890ff;
+    cursor: pointer;
+    min-width: max-content;
+    @media (max-width: 540px) {
+      padding: 3px 6px;
+    }
+  `
 
   return (
     <Flex justifyContentSpaceBetween alignItemsCenter>
@@ -44,27 +67,21 @@ function Header(props: any) {
         </Link>
       </Flex>
       <Flex>
-        <Flex style={{ paddingRight: '15px' }}>
-          <Link to={RoutesPath.Courses}>Courses</Link>
-        </Flex>
-        <Flex style={{ paddingRight: '15px' }}>
-          <Link to={RoutesPath.AboutUs} style={{ minWidth: 'max-content' }}>
-            About Us
-          </Link>
-        </Flex>
-        <Flex style={{ paddingRight: '15px' }}>
-          <div
-            style={{
-              padding: '9px 16px',
-              fontSize: '14px',
-              color: '#1890ff',
-              cursor: 'pointer',
-              minWidth: 'max-content'
-            }}
-          >
+        <HeadingFlex>
+          <HeadingLink to={RoutesPath.Courses}>
+            <div style={{ fontSize: '12px' }}>Courses</div>
+          </HeadingLink>
+        </HeadingFlex>
+        <HeadingFlex>
+          <HeadingLink to={RoutesPath.AboutUs}>
+            <div style={{ fontSize: '12px' }}>About Us</div>
+          </HeadingLink>
+        </HeadingFlex>
+        <HeadingFlex>
+          <ContactContainer>
             <ContactUs />
-          </div>
-        </Flex>
+          </ContactContainer>
+        </HeadingFlex>
         {/* <Flex>
           {isLoggedin ? (
             <LoggedInMenu />

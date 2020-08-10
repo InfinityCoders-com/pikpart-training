@@ -43,6 +43,14 @@ const RecruiterImage: any = styled.div`
   width: 50px;
   border-radius: 50px;
 `
+const RecruiterDiv = styled.div`
+  width: 500px;
+  height: auto;
+  margin: 10px 20px;
+  @media (max-width: 540px) {
+    width: 250px;
+  }
+`
 
 function RecruitersTalk() {
   return (
@@ -59,7 +67,7 @@ function RecruitersTalk() {
         {recruiterTalk.map((content: any, i: number) => {
           return (
             <div key={i}>
-              <div style={{ width: '500px', height: 'auto', margin: '10px 20px' }}>
+              <RecruiterDiv>
                 <CandidateXp>{content.review}</CandidateXp>
                 <Flex
                   justifyContentFlexStart
@@ -77,7 +85,7 @@ function RecruitersTalk() {
                     {content.author}, {content.position}
                   </CandidateName>
                 </Flex>
-              </div>
+              </RecruiterDiv>
             </div>
           )
         })}

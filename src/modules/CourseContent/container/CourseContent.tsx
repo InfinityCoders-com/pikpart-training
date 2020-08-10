@@ -4,6 +4,7 @@ import { Semester } from '../component'
 import Card from '../component/Card'
 import data from '../../../data.json'
 import { H2Heading, Section } from '../../AboutUs/container/AboutUs'
+import CertificateForm from '../../Application/component/CertificateForm'
 
 const style = {
   padding: '10px 20px 0'
@@ -62,6 +63,7 @@ function CourseContent(props: any) {
         </Flex> */}
         {Sem(data.courseContent[id[2]].semester.sem)}
       </Flex>
+      <CertificateForm />
     </Section>
   )
 }

@@ -34,15 +34,14 @@ function TrainerForm() {
     }
   }
   const isSubmitEnabled =
-    form.values.Course &&
     form.values.Name &&
     form.values.Email &&
     form.values.Phone &&
-    form.values.Center &&
+    form.values.Address &&
+    form.values.Location &&
     form.values.Qualification &&
-    form.values.Percent &&
-    form.values.Experience &&
-    form.values.Message
+    form.values.WorkExperience &&
+    form.values.Expertise
   return (
     <>
       <Flex
@@ -73,7 +72,7 @@ function TrainerForm() {
                 fontSize: 14
               }}
             >
-              Application Form
+              Trainer Registration Form
             </div>
             <Flex
               style={{
@@ -83,44 +82,6 @@ function TrainerForm() {
               justifyContentSpaceBetween
               alignItemsCenter
             >
-              <Flex width={[1, 0.47]}>
-                <FormSelect
-                  placeholder="Select Your Choice"
-                  name="Course"
-                  label="Course Name*"
-                  onChange={onchange}
-                  onBlur={onBlur}
-                  list={[
-                    {
-                      label: 'Diploma Course in Two Wheeler Mechanism and Maintenance',
-                      value: 'Diploma Course in Two Wheeler Mechanism and Maintenance'
-                    },
-                    {
-                      label: 'Training Course In Electric Vehicle Technologies',
-                      value: 'Training Course In Electric Vehicle Technologies'
-                    },
-                    {
-                      label: 'Training Course In Data Entry Operator',
-                      value: 'Training Course In Data Entry Operator'
-                    },
-                    {
-                      label: 'Training Course In Maintenance Supervisor',
-                      value: 'Training Course In Maintenance Supervisor'
-                    }
-                  ]}
-                  value={form.values['Course']}
-                  fieldErrors={form.errors}
-                  style={{
-                    formElement: {
-                      fontSize: '12px',
-                      fontWeight: 200,
-                      border: '1px solid #d9d9d9',
-                      borderRadius: 3,
-                      color: '#676767'
-                    }
-                  }}
-                />
-              </Flex>
               <Flex width={[1, 0.47]}>
                 <FormInput
                   label="Full Name*"
@@ -161,14 +122,40 @@ function TrainerForm() {
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
-                <FormSelect
-                  placeholder="Select Your Choice"
-                  name="Center"
-                  label="Training Center*"
+                <FormInput
+                  label="Address*"
+                  type="textarea"
+                  placeholder="Enter full Address"
+                  name="Address"
                   onChange={onchange}
                   onBlur={onBlur}
-                  list={[{ label: 'Kashipur', value: 'Kashipur' }]}
-                  value={form.values['Center']}
+                  value={form.values['Address']}
+                  fieldErrors={form.errors}
+                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                />
+              </Flex>
+              <Flex width={[1, 0.47]}>
+                <FormSelect
+                  placeholder="Select Your Choice"
+                  name="Qualification"
+                  label="Academic Qualification*"
+                  onChange={onchange}
+                  onBlur={onBlur}
+                  list={[
+                    {
+                      label: 'Diploma',
+                      value: 'Diploma'
+                    },
+                    {
+                      label: 'ITI',
+                      value: 'ITI'
+                    },
+                    {
+                      label: 'B-Tech',
+                      value: 'B-Tech'
+                    }
+                  ]}
+                  value={form.values['Qualification']}
                   fieldErrors={form.errors}
                   style={{
                     formElement: {
@@ -182,55 +169,110 @@ function TrainerForm() {
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
-                <FormInput
-                  label="Highest Qualification*"
-                  type="text"
-                  placeholder="MCA"
-                  name="Qualification"
+                <FormSelect
+                  placeholder="Select Your Choice"
+                  name="WorkExperience"
+                  label="Have Work Experience?*"
                   onChange={onchange}
                   onBlur={onBlur}
-                  value={form.values['Qualification']}
+                  list={[
+                    {
+                      label: 'Yes',
+                      value: 'yes'
+                    },
+                    {
+                      label: 'No',
+                      value: 'no'
+                    }
+                  ]}
+                  value={form.values['WorkExperience']}
                   fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                  style={{
+                    formElement: {
+                      fontSize: '12px',
+                      fontWeight: 200,
+                      border: '1px solid #d9d9d9',
+                      borderRadius: 3,
+                      color: '#676767'
+                    }
+                  }}
                 />
               </Flex>
+              {form.values.WorkExperience === 'yes' ? (
+                <>
+                  <Flex width={[1, 0.47]}>
+                    <FormInput
+                      label="Company Name*"
+                      type="text"
+                      placeholder="Company Name"
+                      name="Company"
+                      onChange={onchange}
+                      onBlur={onBlur}
+                      value={form.values['Company']}
+                      fieldErrors={form.errors}
+                      style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    />
+                  </Flex>
+                  <Flex width={[1, 0.47]}>
+                    <FormInput
+                      label="Position*"
+                      type="text"
+                      placeholder="Working Position In The Company"
+                      name="Position"
+                      onChange={onchange}
+                      onBlur={onBlur}
+                      value={form.values['Position']}
+                      fieldErrors={form.errors}
+                      style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    />
+                  </Flex>
+                  <Flex width={[1, 0.47]}>
+                    <FormInput
+                      label="Duration*"
+                      type="number"
+                      placeholder="Working Duration With The Company In month"
+                      name="Experience"
+                      onChange={onchange}
+                      onBlur={onBlur}
+                      value={form.values['Experience']}
+                      fieldErrors={form.errors}
+                      style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    />
+                  </Flex>
+                </>
+              ) : null}
               <Flex width={[1, 0.47]}>
                 <FormInput
-                  label="Percent/CGPA*"
-                  type="number"
-                  placeholder="Percent/CGPA of Last Semester"
-                  name="Percent"
-                  onChange={onchange}
-                  onBlur={onBlur}
-                  value={form.values['Percent']}
-                  fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
-                />
-              </Flex>
-              <Flex width={[1, 0.47]}>
-                <FormInput
-                  label="Work Experience*"
-                  type="number"
-                  placeholder="Experience In Months"
-                  name="Experience"
-                  onChange={onchange}
-                  onBlur={onBlur}
-                  value={form.values['Experience']}
-                  fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
-                />
-              </Flex>
-              <Flex width={[1, 0.47]}>
-                <FormInput
-                  label="Message*"
+                  label="Area of Expertise*"
                   type="textarea"
-                  placeholder="Message for Enquiry"
-                  name="Message"
+                  placeholder="Enter The Topics In Which You Have Good Knowledge"
+                  name="Expertise"
                   onChange={onchange}
                   onBlur={onBlur}
-                  value={form.values['Message']}
+                  value={form.values['Expertise']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                />
+              </Flex>
+              <Flex width={[1, 0.47]}>
+                <FormSelect
+                  placeholder="Select Your Choice"
+                  name="Location"
+                  label="Preferred Location*"
+                  onChange={onchange}
+                  onBlur={onBlur}
+                  list={[{ label: 'Kashipur', value: 'Kashipur' }]}
+                  value={form.values['Location']}
+                  fieldErrors={form.errors}
+                  style={{
+                    formElement: {
+                      fontSize: '12px',
+                      fontWeight: 200,
+                      border: '1px solid #d9d9d9',
+                      borderRadius: 3,
+                      color: '#676767'
+                    }
+                  }}
                 />
               </Flex>
             </Flex>
