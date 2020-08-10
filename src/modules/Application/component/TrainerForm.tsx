@@ -18,19 +18,74 @@ function TrainerForm() {
       values: { ...form.values, [target.name]: target.value }
     })
   }
-  function onBlur({ target }: any) {
-    if (!form.values[target.name] || form.values[target.name] === '') {
-      // set error if value is empty
+  // function onBlur({ target }: any) {
+  //   if (!form.values[target.name] || form.values[target.name] === '') {
+  //     // set error if value is empty
+  //     setForm({
+  //       ...form,
+  //       errors: { ...form.errors, [target.name]: [target.name] + ' Field Cannot be Empty' }
+  //     })
+  //   } else if (form.values[target.name]) {
+  //     // remove error if value exists
+  //     setForm({
+  //       ...form,
+  //       errors: { ...form.errors, [target.name]: '' }
+  //     })
+  //   }
+  // }
+  function onSubmit() {
+    const {
+      Name,
+      Email,
+      Phone,
+      Address,
+      Location,
+      Qualification,
+      WorkExperience,
+      Expertise
+    } = form.values
+    let error = true
+    if (
+      Phone.length === 10 &&
+      Name !== '' &&
+      Email !== '' &&
+      Address !== '' &&
+      Location !== '' &&
+      Qualification !== '' &&
+      WorkExperience !== '' &&
+      Expertise !== ''
+    ) {
+      error = false
       setForm({
         ...form,
-        errors: { ...form.errors, [target.name]: [target.name] + ' Field Cannot be Empty' }
+        errors: {
+          ...form.errors,
+          Phone: '',
+          Name: '',
+          Email: '',
+          Address: '',
+          Location: '',
+          Qualification: '',
+          WorkExperience: '',
+          Expertise: ''
+        }
       })
-    } else if (form.values[target.name]) {
-      // remove error if value exists
-      setForm({
-        ...form,
-        errors: { ...form.errors, [target.name]: '' }
-      })
+    } else {
+      if (Phone.length !== 10) {
+        error = true
+        setForm({
+          ...form,
+          errors: {
+            ...form.errors,
+            Phone: 'Phone number must be of 10 digit'
+          }
+        })
+      }
+    }
+    console.log(form.values)
+    console.log(form.errors)
+    if (!error) {
+      console.log(form)
     }
   }
   const isSubmitEnabled =
@@ -89,7 +144,7 @@ function TrainerForm() {
                   placeholder="John Doe"
                   name="Name"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Name']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -102,7 +157,7 @@ function TrainerForm() {
                   placeholder="abc@xyz.com"
                   name="Email"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Email']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -115,7 +170,7 @@ function TrainerForm() {
                   placeholder="9999999999"
                   name="Phone"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Phone']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -128,7 +183,7 @@ function TrainerForm() {
                   placeholder="Enter full Address"
                   name="Address"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Address']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -140,7 +195,7 @@ function TrainerForm() {
                   name="Qualification"
                   label="Academic Qualification*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   list={[
                     {
                       label: 'Diploma',
@@ -174,7 +229,7 @@ function TrainerForm() {
                   name="WorkExperience"
                   label="Have Work Experience?*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   list={[
                     {
                       label: 'Yes',
@@ -207,7 +262,7 @@ function TrainerForm() {
                       placeholder="Company Name"
                       name="Company"
                       onChange={onchange}
-                      onBlur={onBlur}
+                      // onBlur={onBlur}
                       value={form.values['Company']}
                       fieldErrors={form.errors}
                       style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -220,7 +275,7 @@ function TrainerForm() {
                       placeholder="Working Position In The Company"
                       name="Position"
                       onChange={onchange}
-                      onBlur={onBlur}
+                      // onBlur={onBlur}
                       value={form.values['Position']}
                       fieldErrors={form.errors}
                       style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -233,7 +288,7 @@ function TrainerForm() {
                       placeholder="Working Duration With The Company In month"
                       name="Experience"
                       onChange={onchange}
-                      onBlur={onBlur}
+                      // onBlur={onBlur}
                       value={form.values['Experience']}
                       fieldErrors={form.errors}
                       style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -248,7 +303,7 @@ function TrainerForm() {
                   placeholder="Enter The Topics In Which You Have Good Knowledge"
                   name="Expertise"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Expertise']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -260,7 +315,7 @@ function TrainerForm() {
                   name="Location"
                   label="Preferred Location*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   list={[{ label: 'Kashipur', value: 'Kashipur' }]}
                   value={form.values['Location']}
                   fieldErrors={form.errors}
@@ -276,11 +331,15 @@ function TrainerForm() {
                 />
               </Flex>
             </Flex>
-            {/* <div style={{ width: '30%', margin: '0 auto' }}> */}
-            <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
+
+            <Button
+              variant="m primary"
+              disabled={!isSubmitEnabled}
+              style={{ margin: '0 auto' }}
+              onClick={onSubmit}
+            >
               REGISTER
             </Button>
-            {/* </div> */}
           </Flex>
         </FormContainer>
       </Modal>

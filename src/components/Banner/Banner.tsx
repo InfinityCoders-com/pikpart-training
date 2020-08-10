@@ -8,19 +8,6 @@ import { FaAngleLeft, FaAngleRight, FaPencilAlt } from 'react-icons/fa'
 
 const banners = [{ pic: training }, { pic: job }, { pic: recruitment }]
 
-// const BFlex = styled(Flex)`
-//   width: 100%;
-//   height: auto;
-//   position: relative;
-//   @media screen and (max-width: 500px) {
-//     max-height: 250px;
-//   }
-// `
-
-// const BImg = styled.img`
-//   width: 100%;
-//   height: auto;
-// `
 const TestimonialWraper = styled(Flex)`
   overflow: hidden;
   // margin-bottom: 50px;
@@ -69,9 +56,6 @@ const RightButton = styled.button`
 function Banner({ title, des }: any) {
   const [next, setNext] = React.useState(0)
   return (
-    // <BFlex>
-    //   <BImg src={job} />
-    // </BFlex>
     <Flex justifyContentCenter alignItemsCenter>
       <TestimonialWraper justifyContentCenter width={[1]} style={{ position: 'relative' }}>
         <LeftButton onClick={(e) => next > 0 && setNext(next - 1)}>
@@ -83,7 +67,6 @@ function Banner({ title, des }: any) {
             overflow: 'hidden'
           }}
         >
-          {/* <Flex style={{ marginLeft: `-${next * 65}vw`, transition: '1s ease', width: 'auto' }}> */}
           <Flex
             style={{
               marginLeft: `-${next * 100}vw`,

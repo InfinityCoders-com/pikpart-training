@@ -10,31 +10,31 @@ function ProfessionalForm() {
   })
   const [form, setForm] = React.useState<any>({
     values: {
-      companyName: '',
-      email: '',
-      representativeName: '',
-      representativePhone: '',
-      candidateSelection: {
-        twoWheeler: {}
-      }
+      // companyName: '',
+      // email: '',
+      // representativeName: '',
+      // representativePhone: '',
+      // candidateSelection: {
+      //   twoWheeler: {}
+      // }
     },
     errors: {}
   })
 
-  const onWorkerSelection = (type: any, member: any, value: any) => {
-    if (type === 'twoWheeler') {
-      setForm({
-        ...form,
-        candidateSelection: {
-          ...form.candidateSelection,
-          twoWheeler: { ...form.candidateSelection.twoWheeler, [member]: value }
-        }
-      })
-    }
-  }
+  // const onWorkerSelection = (type: any, member: any, value: any) => {
+  //   if (type === 'twoWheeler') {
+  //     setForm({
+  //       ...form,
+  //       candidateSelection: {
+  //         ...form.candidateSelection,
+  //         twoWheeler: { ...form.candidateSelection.twoWheeler, [member]: value }
+  //       }
+  //     })
+  //   }
+  // }
 
-  onWorkerSelection('twoWheeler', 'basic', 2)
-  console.log(form.values)
+  // onWorkerSelection('twoWheeler', 'basic', 2)
+  // console.log(form.values)
 
   function onchange(target: any) {
     setForm({
@@ -82,27 +82,6 @@ function ProfessionalForm() {
         toggleModal={modal.show}
         setToggleModal={() => setModal({ ...modal, show: false })}
       >
-        {/* <Flex
-          justifyContentFlexStart
-          wrap
-          style={{
-            margin: '20px'
-          }}
-        >
-          <FormInput
-            type="text"
-            placeholder="Search for Professionals"
-            name="professionals"
-            onChange={onchange}
-            value={form.values['Jobs']}
-            fieldErrors={form.errors}
-          />
-          <div style={{ margin: '5px 0px' }}>
-            <Button>
-              <FaSearch style={{ fontSize: '10px' }} />
-            </Button>
-          </div>
-        </Flex> */}
         <FormContainer>
           <Flex width={[1, 0.8]} column>
             <div
@@ -112,7 +91,7 @@ function ProfessionalForm() {
                 fontSize: 14
               }}
             >
-              Trainer Registration Form
+              Request Certified Professional Form
             </div>
             <Flex
               style={{
@@ -174,7 +153,7 @@ function ProfessionalForm() {
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                 />
               </Flex>
-              <Flex width={[1]} style={{ margin: '10px 0px' }}>
+              {/* <Flex width={[1]} style={{ margin: '10px 0px' }}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Candidate Selection*</div>
                 </Flex>
@@ -183,13 +162,13 @@ function ProfessionalForm() {
                   <div style={{ fontSize: '12px', color: '#676767' }}>Advance</div>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Expert</div>
                 </Flex>
-              </Flex>
-              <Flex width={[1]}>
+              </Flex> */}
+              {/* <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Two Wheeler Mechanic</div>
                 </Flex>
                 <Flex width={[0.7]}>
-                  {/* <FormInput
+                  <FormInput
                     // label="Representative Phone*"
                     type="checkBox"
                     // placeholder="Phone Number of the Person Who Represent the Company"
@@ -200,7 +179,7 @@ function ProfessionalForm() {
                     checked={false}
                     fieldErrors={form.errors}
                     style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
-                  /> */}
+                  />
                   <FormInput
                     // label="Representative Phone*"
                     type="checkBox"
@@ -224,8 +203,8 @@ function ProfessionalForm() {
                     style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                   />
                 </Flex>
-              </Flex>
-              <Flex width={[1]}>
+              </Flex> */}
+              {/* <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>
                     Electric Vehicle Mechanic
@@ -266,8 +245,8 @@ function ProfessionalForm() {
                     style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                   />
                 </Flex>
-              </Flex>
-              <Flex width={[1]}>
+              </Flex> */}
+              {/* <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Data Entry Operator</div>
                 </Flex>
@@ -306,8 +285,8 @@ function ProfessionalForm() {
                     style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                   />
                 </Flex>
-              </Flex>
-              <Flex width={[1]}>
+              </Flex> */}
+              {/* <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Maintenance Supervisor</div>
                 </Flex>
@@ -346,9 +325,8 @@ function ProfessionalForm() {
                     fieldErrors={form.errors}
                     style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                   />
-                  basicMembers == true - 1 +
                 </Flex>
-              </Flex>
+              </Flex> */}
             </Flex>
           </Flex>
         </FormContainer>

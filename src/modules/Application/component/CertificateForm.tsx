@@ -28,19 +28,77 @@ function CertificateForm(props: any) {
       values: { ...form.values, [target.name]: target.value }
     })
   }
-  function onBlur({ target }: any) {
-    if (!form.values[target.name] || form.values[target.name] === '') {
-      // set error if value is empty
+  // function onBlur({ target }: any) {
+  //   if (!form.values[target.name] || form.values[target.name] === '') {
+  //     // set error if value is empty
+  //     setForm({
+  //       ...form,
+  //       errors: { ...form.errors, [target.name]: [target.name] + ' Field Cannot be Empty' }
+  //     })
+  //   } else if (form.values[target.name]) {
+  //     // remove error if value exists
+  //     setForm({
+  //       ...form,
+  //       errors: { ...form.errors, [target.name]: '' }
+  //     })
+  //   }
+  // }
+  function onSubmit() {
+    const {
+      Name,
+      Email,
+      Phone,
+      Center,
+      Course,
+      Qualification,
+      Percent,
+      Experience,
+      Message
+    } = form.values
+    let error = true
+    if (
+      Phone.length === 10 &&
+      Name !== '' &&
+      Email !== '' &&
+      Center !== '' &&
+      Course !== '' &&
+      Qualification !== '' &&
+      Percent !== '' &&
+      Experience !== '' &&
+      Message !== ''
+    ) {
+      error = false
       setForm({
         ...form,
-        errors: { ...form.errors, [target.name]: [target.name] + ' Field Cannot be Empty' }
+        errors: {
+          ...form.errors,
+          Phone: '',
+          Name: '',
+          Email: '',
+          Center: '',
+          Course: '',
+          Qualification: '',
+          Percent: '',
+          Experience: '',
+          Message: ''
+        }
       })
-    } else if (form.values[target.name]) {
-      // remove error if value exists
-      setForm({
-        ...form,
-        errors: { ...form.errors, [target.name]: '' }
-      })
+    } else {
+      if (Phone.length !== 10) {
+        error = true
+        setForm({
+          ...form,
+          errors: {
+            ...form.errors,
+            Phone: 'Phone number must be of 10 digit'
+          }
+        })
+      }
+    }
+    console.log(form.values)
+    console.log(form.errors)
+    if (!error) {
+      console.log(form)
     }
   }
   const isSubmitEnabled =
@@ -101,7 +159,7 @@ function CertificateForm(props: any) {
                   name="Course"
                   label="Course Name*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   list={[
                     {
                       label: 'Diploma Course in Two Wheeler Mechanism and Maintenance',
@@ -140,7 +198,7 @@ function CertificateForm(props: any) {
                   placeholder="John Doe"
                   name="Name"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Name']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -153,7 +211,7 @@ function CertificateForm(props: any) {
                   placeholder="abc@xyz.com"
                   name="Email"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Email']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -166,7 +224,7 @@ function CertificateForm(props: any) {
                   placeholder="9999999999"
                   name="Phone"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Phone']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -178,7 +236,7 @@ function CertificateForm(props: any) {
                   name="Center"
                   label="Training Center*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   list={[{ label: 'Kashipur', value: 'Kashipur' }]}
                   value={form.values['Center']}
                   fieldErrors={form.errors}
@@ -194,16 +252,28 @@ function CertificateForm(props: any) {
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
-                <FormInput
-                  label="Highest Qualification*"
-                  type="text"
-                  placeholder="MCA"
+                <FormSelect
+                  placeholder="Select Your Choice"
                   name="Qualification"
+                  label="Highest Qualification*"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
+                  list={[
+                    { label: 'Diploma', value: 'Diploma' },
+                    { label: 'ITI', value: 'ITI' },
+                    { label: 'B-Tech', value: 'B-Tech' }
+                  ]}
                   value={form.values['Qualification']}
                   fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                  style={{
+                    formElement: {
+                      fontSize: '12px',
+                      fontWeight: 200,
+                      border: '1px solid #d9d9d9',
+                      borderRadius: 3,
+                      color: '#676767'
+                    }
+                  }}
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
@@ -213,7 +283,7 @@ function CertificateForm(props: any) {
                   placeholder="Percent/CGPA of Last Semester"
                   name="Percent"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Percent']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -226,7 +296,7 @@ function CertificateForm(props: any) {
                   placeholder="Experience In Months"
                   name="Experience"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Experience']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
@@ -239,18 +309,22 @@ function CertificateForm(props: any) {
                   placeholder="Message for Enquiry"
                   name="Message"
                   onChange={onchange}
-                  onBlur={onBlur}
+                  // onBlur={onBlur}
                   value={form.values['Message']}
                   fieldErrors={form.errors}
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                 />
               </Flex>
             </Flex>
-            {/* <div style={{ width: '30%', margin: '0 auto' }}> */}
-            <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
+
+            <Button
+              variant="m primary"
+              disabled={!isSubmitEnabled}
+              style={{ margin: '0 auto' }}
+              onClick={onSubmit}
+            >
               REGISTER
             </Button>
-            {/* </div> */}
           </Flex>
         </FormContainer>
       </Modal>
