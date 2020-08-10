@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Span, Input, SearchSelect, Button } from '@icstark/ui'
-import { LabelValue } from '../../Contact/container/Contact'
+// import { LabelValue } from '../../ContactRegister/container/ContactRegister'
 
 const selectStyle = {
   color: 'rgba(0,0,0,0.65)',
