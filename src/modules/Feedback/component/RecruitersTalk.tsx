@@ -42,11 +42,12 @@ const RecruiterImage: any = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 50px;
+  border: 1px solid #d3d3d3;
 `
-const RecruiterDiv = styled.div`
-  width: 500px;
+const RecruiterDiv: any = styled(Flex)`
+  min-width: 500px;
   height: auto;
-  margin: 10px 20px;
+  padding: 10px 20px;
   @media (max-width: 540px) {
     width: 250px;
   }
@@ -66,27 +67,21 @@ function RecruitersTalk() {
         </div> */}
         {recruiterTalk.map((content: any, i: number) => {
           return (
-            <div key={i}>
-              <RecruiterDiv>
-                <CandidateXp>{content.review}</CandidateXp>
-                <Flex
-                  justifyContentFlexStart
-                  alignItemsCenter
-                  style={{ height: '20%', marginTop: '10px' }}
-                >
-                  <Flex>
-                    {content.image ? (
-                      <RecruiterImage img={content.image} />
-                    ) : (
-                      <FaUserCircle style={{ fontSize: '30px' }} />
-                    )}
-                  </Flex>
-                  <CandidateName alignItemsCenter>
-                    {content.author}, {content.position}
-                  </CandidateName>
+            <RecruiterDiv key={i} column justifyContentSpaceBetween>
+              <CandidateXp>{content.review}</CandidateXp>
+              <Flex justifyContentFlexStart alignItemsCenter p={4}>
+                <Flex>
+                  {content.image ? (
+                    <RecruiterImage img={content.image} />
+                  ) : (
+                    <FaUserCircle style={{ fontSize: '30px' }} />
+                  )}
                 </Flex>
-              </RecruiterDiv>
-            </div>
+                <CandidateName alignItemsCenter>
+                  {content.author}, {content.position}
+                </CandidateName>
+              </Flex>
+            </RecruiterDiv>
           )
         })}
       </RecruitBody>

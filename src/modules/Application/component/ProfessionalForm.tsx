@@ -37,10 +37,28 @@ function ProfessionalForm() {
   // console.log(form.values)
 
   function onchange(target: any) {
-    setForm({
-      ...form,
-      values: { ...form.values, [target.name]: target.value }
-    })
+    console.log(target.name, target.value)
+
+    if (
+      target.name === 'RepresentativePhoneBasic' &&
+      !['1', '2', '3', '4', '5'].includes(target.value)
+    ) {
+      let temp = form.values[target.name]
+      if (parseInt(target.value) > 5) {
+        temp = 5
+      } else if (parseInt(target.value) < 1) {
+        temp = 1
+      }
+      setForm({
+        ...form,
+        values: { ...form.values, [target.name]: temp }
+      })
+    } else {
+      setForm({
+        ...form,
+        values: { ...form.values, [target.name]: target.value }
+      })
+    }
   }
   function onBlur({ target }: any) {
     if (!form.values[target.name] || form.values[target.name] === '') {
@@ -93,14 +111,7 @@ function ProfessionalForm() {
             >
               Request Certified Professional Form
             </div>
-            <Flex
-              style={{
-                margin: '10px 0px'
-              }}
-              wrap
-              justifyContentSpaceBetween
-              alignItemsCenter
-            >
+            <Flex style={{ margin: '10px 0px' }} wrap justifyContentSpaceBetween alignItemsCenter>
               <Flex width={[1, 0.47]}>
                 <FormInput
                   label="Company Name*"
@@ -153,7 +164,7 @@ function ProfessionalForm() {
                   style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
                 />
               </Flex>
-              {/* <Flex width={[1]} style={{ margin: '10px 0px' }}>
+              <Flex width={[1]} style={{ margin: '10px 0px' }}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Candidate Selection*</div>
                 </Flex>
@@ -162,48 +173,53 @@ function ProfessionalForm() {
                   <div style={{ fontSize: '12px', color: '#676767' }}>Advance</div>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Expert</div>
                 </Flex>
-              </Flex> */}
-              {/* <Flex width={[1]}>
+              </Flex>
+              <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>Two Wheeler Mechanic</div>
                 </Flex>
                 <Flex width={[0.7]}>
                   <FormInput
-                    // label="Representative Phone*"
-                    type="checkBox"
-                    // placeholder="Phone Number of the Person Who Represent the Company"
-                    name="RepresentativePhone"
+                    type="number"
+                    name="RepresentativePhoneBasic"
+                    placeholder="1-5"
                     onChange={onchange}
                     onBlur={onBlur}
-                    // value={form.values['RepresentativePhone']}
-                    checked={false}
+                    value={form.values['RepresentativePhoneBasic']}
                     fieldErrors={form.errors}
-                    style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    style={{
+                      container: { width: 40, flexGrow: 0 },
+                      formElement: { fontSize: '12px', fontWeight: 200 }
+                    }}
                   />
                   <FormInput
-                    // label="Representative Phone*"
-                    type="checkBox"
-                    // placeholder="Phone Number of the Person Who Represent the Company"
+                    type="number"
+                    placeholder="1-5"
                     name="RepresentativePhone"
                     onChange={onchange}
                     onBlur={onBlur}
                     value={form.values['RepresentativePhone']}
                     fieldErrors={form.errors}
-                    style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    style={{
+                      container: { width: 40, flexGrow: 0 },
+                      formElement: { fontSize: '12px', fontWeight: 200 }
+                    }}
                   />
                   <FormInput
-                    // label="Representative Phone*"
-                    type="checkBox"
-                    // placeholder="Phone Number of the Person Who Represent the Company"
+                    type="number"
+                    placeholder="1-5"
                     name="RepresentativePhone"
                     onChange={onchange}
                     onBlur={onBlur}
                     value={form.values['RepresentativePhone']}
                     fieldErrors={form.errors}
-                    style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                    style={{
+                      container: { width: 40, flexGrow: 0 },
+                      formElement: { fontSize: '12px', fontWeight: 200 }
+                    }}
                   />
                 </Flex>
-              </Flex> */}
+              </Flex>
               {/* <Flex width={[1]}>
                 <Flex width={[0.3]}>
                   <div style={{ fontSize: '12px', color: '#676767' }}>

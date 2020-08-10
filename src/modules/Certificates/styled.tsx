@@ -1,19 +1,17 @@
 import { styled, Flex } from '@icstark/ui'
 
 export const CertificateName = styled.div`
-  font-weight: 500;
+  font-weight: 600;
   color: #676767;
-  margin: 0 auto;
-  font-size: 14px;
-  margin-top: 5px;
+  margin: 35px auto 20px;
+  font-size: 16px;
 `
 
 export const CertificateDesc = styled.div`
   color: #676767;
   margin: 0 auto;
   font-size: 12px;
-  margin-top: 5px;
-  width: 90%;
+  width: 80%;
   text-align: justify;
 `
 export const CertificateContainer = styled(Flex)`

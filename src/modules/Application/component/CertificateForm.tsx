@@ -14,12 +14,33 @@ export const FormContainer = styled(Flex)`
   }
 `
 
+export const Courses = [
+  {
+    label: 'Diploma Course in Two Wheeler Mechanism and Maintenance',
+    value: 'Diploma Course in Two Wheeler Mechanism and Maintenance'
+  },
+  {
+    label: 'Training Course In Electric Vehicle Technologies',
+    value: 'Training Course In Electric Vehicle Technologies'
+  },
+  {
+    label: 'Training Course In Data Entry Operator',
+    value: 'Training Course In Data Entry Operator'
+  },
+  {
+    label: 'Training Course In Maintenance Supervisor',
+    value: 'Training Course In Maintenance Supervisor'
+  }
+]
+
 function CertificateForm(props: any) {
   const [modal, setModal] = React.useState({
     show: false
   })
   const [form, setForm] = React.useState<any>({
-    values: {},
+    values: {
+      // Course: 'Diploma Course in Two Wheeler Mechanism and Maintenance'
+    },
     errors: {}
   })
   function onchange(target: any) {

@@ -32,8 +32,14 @@ export const TrustedHeading = styled.div`
 export const TrustBrandContainer = styled(Flex)`
   width: 80%;
   overflow: auto;
+  > div {
+    min-width: 20vw;
+  }
   @media (max-width: 540px) {
     width: 100%;
+    > div {
+      min-width: 40vw;
+    }
   }
   &::-webkit-scrollbar {
     height: 6px;
@@ -57,10 +63,9 @@ export const RecruitContainer = styled(Flex)`
   }
 `
 export const RecruitHeading = styled.div`
-  padding-top: 7px;
   width: 15%;
-  font-weight: 500;
-  color: #676767;
+  font-weight: 600;
+  color: #444;
   @media (max-width: 540px) {
     width: 100%;
     text-align: center;
@@ -91,8 +96,10 @@ export const CandidateHeading = styled.div`
 `
 export const CandidateXp = styled.div`
   font-size: 14px;
-  color: #676767;
-  height: 80%;
+  color: #4d4d4d;
+  font-weight: 300;
+  font-style: italic;
+  text-align: justify;
 `
 export const CandidateName = styled(Flex)`
   margin: 0px 15px;

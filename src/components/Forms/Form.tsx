@@ -103,6 +103,8 @@ interface IForm {
     label?: React.CSSProperties
     formElement?: React.CSSProperties
   }
+  min?: number
+  max?: number
   variant?: 'row' | 'column' | 'rowToColumn' | 'columnToRow'
   onChange?: (item: any) => void
   onBlur?: (item: any) => void
@@ -124,6 +126,8 @@ interface IFormSelect extends IForm {
 export function FormInput({
   type,
   name,
+  min,
+  max,
   label,
   style = {},
   value,
@@ -137,8 +141,8 @@ export function FormInput({
   fieldErrors
 }: IFormInput) {
   const styles = {
-    ...style.container,
-    ...(['checkbox', 'radio'].includes(type) ? {} : { flexGrow: 1 })
+    ...(['checkbox', 'radio'].includes(type) ? {} : { flexGrow: 1 }),
+    ...style.container
   }
   return (
     <Form variant={variant} alignItemsFlexStart style={{ ...styles, margin: '5px 0px' }}>
