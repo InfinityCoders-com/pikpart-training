@@ -138,14 +138,14 @@ function CertificateForm(props: any) {
         column
         alignItemsCenter
         style={{ cursor: 'pointer' }}
-        onClick={() =>
-          setModal({
-            ...modal,
-            show: true
-          })
-        }
+        // onClick={() =>
+        //   setModal({
+        //     ...modal,
+        //     show: true
+        //   })
+        // }
       >
-        <FaGraduationCap style={{ fontSize: '60px', marginBottom: '20px' }} />
+        <FaGraduationCap style={{ fontSize: '60px', marginBottom: '20px', color: '#727272' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>
           Apply to Get Certified
         </div>

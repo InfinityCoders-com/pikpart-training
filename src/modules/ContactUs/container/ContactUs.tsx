@@ -75,19 +75,37 @@ function ContactUs() {
       values: { ...contact.values, [target.name]: target.value }
     })
   }
-  function onBlur({ target }: any) {
-    if (!contact.values[target.name] || contact.values[target.name] === '') {
-      // set error if value is empty
+  function onSubmit() {
+    const { Name, Email, Phone, Message } = contact.values
+    let error = true
+    if (Phone.length === 10 && Name !== '' && Email !== '' && Message !== '') {
+      error = false
       setContact({
         ...contact,
-        errors: { ...contact.errors, [target.name]: [target.name] + ' Field Cannot be Empty' }
+        errors: {
+          ...contact.errors,
+          Phone: '',
+          Name: '',
+          Email: '',
+          Message: ''
+        }
       })
-    } else if (contact.values[target.name]) {
-      // remove error if value exists
-      setContact({
-        ...contact,
-        errors: { ...contact.errors, [target.name]: '' }
-      })
+    } else {
+      if (Phone.length !== 10) {
+        error = true
+        setContact({
+          ...contact,
+          errors: {
+            ...contact.errors,
+            Phone: 'Phone number must be of 10 digit'
+          }
+        })
+      }
+    }
+    console.log(contact.values)
+    console.log(contact.errors)
+    if (!error) {
+      console.log(contact)
     }
   }
   const isSubmitEnabled =
@@ -124,8 +142,8 @@ function ContactUs() {
             <div
               style={{
                 textAlign: 'center',
-
                 textDecoration: 'underline',
+                color: '#1890ff !important',
                 fontSize: 14
               }}
             >
@@ -133,52 +151,53 @@ function ContactUs() {
             </div>
             <div style={{ margin: '10px 0px' }}>
               <FormInput
-                label="Your Name*"
+                label="Name*"
                 type="text"
                 placeholder="Full Name"
                 name="Name"
                 onChange={onchange}
-                onBlur={onBlur}
                 value={contact.values['Name']}
                 fieldErrors={contact.errors}
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Your Phone*"
+                label="Phone*"
                 type="number"
                 placeholder="Phone Number"
                 name="Phone"
                 onChange={onchange}
-                onBlur={onBlur}
                 value={contact.values['Phone']}
                 fieldErrors={contact.errors}
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Your Email*"
+                label="Email*"
                 type="email"
                 placeholder="Email"
                 name="Email"
                 onChange={onchange}
-                onBlur={onBlur}
                 value={contact.values['Email']}
                 fieldErrors={contact.errors}
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
               <FormInput
-                label="Your Message*"
+                label="Message*"
                 type="textarea"
                 placeholder="Message"
                 name="Message"
                 onChange={onchange}
-                onBlur={onBlur}
                 value={contact.values['Message']}
                 fieldErrors={contact.errors}
                 style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
               />
             </div>
             <div>
-              <Button variant="m primary" disabled={!isSubmitEnabled} style={{ margin: '0 auto' }}>
+              <Button
+                variant="m primary"
+                disabled={!isSubmitEnabled}
+                style={{ margin: '0 auto' }}
+                onClick={onSubmit}
+              >
                 CONTACT US
               </Button>
             </div>

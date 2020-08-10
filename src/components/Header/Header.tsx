@@ -51,7 +51,7 @@ function Header(props: any) {
   const ContactContainer = styled.div`
     padding: 9px 16px;
     font-size: 12px;
-    color: #1890ff;
+    font-weight: 600;
     cursor: pointer;
     min-width: max-content;
     @media (max-width: 540px) {
@@ -69,12 +69,28 @@ function Header(props: any) {
       <Flex>
         <HeadingFlex>
           <HeadingLink to={RoutesPath.Courses}>
-            <div style={{ fontSize: '12px' }}>Courses</div>
+            <div
+              style={{
+                fontSize: '12px',
+                color: '#222',
+                fontWeight: 600
+              }}
+            >
+              Courses
+            </div>
           </HeadingLink>
         </HeadingFlex>
         <HeadingFlex>
           <HeadingLink to={RoutesPath.AboutUs}>
-            <div style={{ fontSize: '12px' }}>About Us</div>
+            <div
+              style={{
+                fontSize: '12px',
+                color: '#222',
+                fontWeight: 600
+              }}
+            >
+              About Us
+            </div>
           </HeadingLink>
         </HeadingFlex>
         <HeadingFlex>

@@ -2,7 +2,7 @@ import { styled, Flex } from '@icstark/ui'
 
 export const ContactUsDiv = styled.div`
   fontsize: 20px;
-  color: ${(props: any) => props.theme.colors.primary};
+  // color: ${(props: any) => props.theme.colors.primary};
   font-weight: 600;
   cursor: pointer;
   min-width: max-content;

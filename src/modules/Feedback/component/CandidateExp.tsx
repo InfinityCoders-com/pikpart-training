@@ -50,12 +50,18 @@ const CandidateTalk = [
     image: candidate3
   }
 ]
+const CandidateDiv = styled(Flex)`
+  min-width: 300px;
+  height: auto;
+  padding: 10px 20px;
+`
 const CandidateImage: any = styled.div`
   background: ${(props: any) => `url(${props.img})`}center center no-repeat;
   background-size: contain;
   height: 50px;
   width: 50px;
   border-radius: 50px;
+  border: 1px solid #d3d3d3;
 `
 function CandidateExp() {
   return (
@@ -64,27 +70,22 @@ function CandidateExp() {
       <CandidateBody>
         {CandidateTalk.map((content: any, i: number) => {
           return (
-            <div key={i}>
-              <div style={{ width: '300px', height: 'auto', margin: '10px 20px' }}>
-                <CandidateXp>{content.review}</CandidateXp>
-                <Flex
-                  justifyContentFlexStart
-                  alignItemsCenter
-                  style={{ height: '20%', marginTop: '10px' }}
-                >
-                  <Flex>
-                    {content.image ? (
-                      <CandidateImage img={content.image} />
-                    ) : (
-                      <FaUserCircle style={{ fontSize: '30px' }} />
-                    )}
-                  </Flex>
-                  <CandidateName alignItemsCenter>
-                    {content.author}, {content.position}
-                  </CandidateName>
+            <CandidateDiv column justifyContentSpaceBetween key={i}>
+              <CandidateXp>{content.review}</CandidateXp>
+
+              <Flex justifyContentFlexStart alignItemsCenter p={4}>
+                <Flex>
+                  {content.image ? (
+                    <CandidateImage img={content.image} />
+                  ) : (
+                    <FaUserCircle style={{ fontSize: '30px' }} />
+                  )}
                 </Flex>
-              </div>
-            </div>
+                <CandidateName alignItemsCenter>
+                  {content.author}, {content.position}
+                </CandidateName>
+              </Flex>
+            </CandidateDiv>
           )
         })}
       </CandidateBody>

@@ -8,7 +8,7 @@ import re from '../../../assets/brands-logo/royal-enfield-brand.png'
 import tvs from '../../../assets/brands-logo/tvs-brand.png'
 import yamaha from '../../../assets/brands-logo/yamaha-brand.png'
 import ktm from '../../../assets/brands-logo/ktm-brand.png'
-import pikpart from '../../../assets/brands-logo/pikpart-brand3.png'
+import pikpart from '../../../assets/brands-logo/pikpart-brand4.png'
 import { TrustedContainer, TrustedHeading, TrustBrandContainer } from '../styled'
 
 function TrustedBy() {
@@ -20,7 +20,7 @@ function TrustedBy() {
           <img
             src={pikpart}
             alt="pikpart"
-            style={{ height: '20px', width: 'auto', margin: '30px 20px' }}
+            style={{ height: '40px', width: 'auto', margin: '30px 20px' }}
           />
         </div>
         <div>
