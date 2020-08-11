@@ -170,7 +170,7 @@ function ContactUs({ setModal, modal }: any) {
               onChange={onchange}
               value={contact.values['Message']}
               fieldErrors={contact.errors}
-              style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+              style={{ formElement: { fontSize: '12px', fontWeight: 400 } }}
             />
           </div>
           <div>

@@ -1,6 +1,6 @@
 import { Flex, styled } from '@icstark/ui'
 import React from 'react'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { FaAngleLeft, FaAngleRight, FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import job from '../../assets/banner/job.jpg'
 import recruitment from '../../assets/banner/recruitment.jpg'
 // import banner from '../../assets/banner.jpg'
@@ -30,13 +30,12 @@ const TestimonialSlide: any = styled(Flex)`
 `
 const LeftButton = styled.button`
   position: absolute;
-  left: 2px;
+  // left: 2px;
+  left: 1vw;
   top: 40%;
   z-index: 1;
-  font-size: 40px;
-  &:hover {
-    color: #727272;
-  }
+  font-size: 30px;
+  color: #727272;
   @media (max-width: 540px) {
     font-size: 20px;
   }
@@ -46,10 +45,8 @@ const RightButton = styled.button`
   left: 94vw;
   top: 40%;
   z-index: 1;
-  font-size: 40px;
-  &:hover {
-    color: #727272;
-  }
+  font-size: 30px;
+  color: #727272;
   @media (max-width: 540px) {
     font-size: 20px;
     left: 92vw;
@@ -65,7 +62,7 @@ function Banner({ title, des }: any) {
     <Flex justifyContentCenter alignItemsCenter>
       <TestimonialWrapper justifyContentCenter width={[1]} style={{ position: 'relative' }}>
         <LeftButton onClick={(e) => next > 0 && setNext(next - 1)}>
-          <FaAngleLeft />
+          <FaArrowCircleLeft />
         </LeftButton>
         <Flex
           style={{
@@ -88,7 +85,7 @@ function Banner({ title, des }: any) {
           </Flex>
         </Flex>
         <RightButton onClick={(e) => next < Math.floor(banners.length - 1) && setNext(next + 1)}>
-          <FaAngleRight />
+          <FaArrowCircleRight />
         </RightButton>
       </TestimonialWrapper>
     </Flex>

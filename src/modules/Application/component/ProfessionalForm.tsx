@@ -3,7 +3,7 @@ import { Flex, Span, Button } from '@icstark/ui'
 import { Modal } from '@icstark/ui'
 import { FormInput, FormSelect } from '../../../components/Forms/Form'
 import { FaSearch, FaHandshake } from 'react-icons/fa'
-import { FormContainer } from './CertificateForm'
+import { FormContainer, AvatarContainer } from './CertificateForm'
 function ProfessionalForm() {
   const [modal, setModal] = React.useState({
     show: false
@@ -170,10 +170,9 @@ function ProfessionalForm() {
 
   return (
     <>
-      <Flex
+      <AvatarContainer
         column
         alignItemsCenter
-        style={{ cursor: 'pointer' }}
         onClick={() =>
           setModal({
             ...modal,
@@ -187,7 +186,7 @@ function ProfessionalForm() {
           <br />
           Certified Professional
         </div>
-      </Flex>
+      </AvatarContainer>
       <Modal
         variant="xl Left-Center"
         toggleModal={modal.show}

@@ -13,6 +13,17 @@ export const FormContainer = styled(Flex)`
     flex-wrap: wrap;
   }
 `
+export const AvatarContainer = styled(Flex)`
+  cursor: pointer;
+  border: 5px solid #deac26;
+  padding: 40px 0px;
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  @media (max-width: 768px) {
+    margin: 10px 0px;
+  }
+`
 
 export const Courses = [
   {
@@ -134,10 +145,9 @@ function CertificateForm(props: any) {
     form.values.Message
   return (
     <>
-      <Flex
+      <AvatarContainer
         column
         alignItemsCenter
-        style={{ cursor: 'pointer' }}
         onClick={() =>
           setModal({
             ...modal,
@@ -149,7 +159,7 @@ function CertificateForm(props: any) {
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>
           Apply to Get Certified
         </div>
-      </Flex>
+      </AvatarContainer>
       <Modal
         variant="xl Left-Center"
         toggleModal={modal.show}
@@ -333,7 +343,7 @@ function CertificateForm(props: any) {
                   // onBlur={onBlur}
                   value={form.values['Message']}
                   fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                  style={{ formElement: { fontSize: '12px', fontWeight: 400 } }}
                 />
               </Flex>
             </Flex>
