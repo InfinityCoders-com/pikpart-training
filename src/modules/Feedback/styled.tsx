@@ -1,4 +1,4 @@
-import { styled, Flex } from '@icstark/ui'
+import { styled, Flex, Label } from '@icstark/ui'
 
 // export const TrustBrands = styled.img`
 //   // height: 80px;
@@ -101,17 +101,10 @@ export const CandidateXp = styled.div`
   font-style: italic;
   text-align: justify;
 `
-export const CandidateName = styled(Flex)`
-  margin: 0px 15px;
-  font-size: 12px;
-  color: #676767;
-  font-weight: 600;
-`
 export const CandidateReactContainer = styled(Flex)`
   justify-content: space-between;
   align-item: center;
   margin: 25px 0px;
-  // height: 155px;
   @media (max-width: 540px) {
     flex-direction: column;
   }
@@ -128,9 +121,6 @@ export const Candidatereact = styled(Flex)`
 export const CandidateBody = styled(Flex)`
   width: 100%;
   overflow: auto;
-  // @media (max-width: 540px) {
-  //   width: 100%;
-  // }
   &::-webkit-scrollbar {
     height: 6px;
     width: 6px;

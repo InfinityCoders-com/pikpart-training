@@ -7,7 +7,7 @@ import { ContactUsDiv, FooterContainer } from './styled'
 
 function Footer() {
   return (
-    <Flex style={{ margin: '15px 0px' }}>
+    <Flex style={{ margin: 0 }}>
       <FooterContainer>
         <Flex style={{ margin: '20px 0px' }}>
           <Link to="/">

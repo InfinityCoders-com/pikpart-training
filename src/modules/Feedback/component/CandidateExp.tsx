@@ -1,17 +1,10 @@
+import { Flex, Label, Span, styled } from '@icstark/ui'
 import React from 'react'
-import { Flex, styled } from '@icstark/ui'
 import { FaUserCircle } from 'react-icons/fa'
-import {
-  CandidateHeading,
-  CandidateXp,
-  CandidateName,
-  CandidateReactContainer,
-  Candidatereact,
-  CandidateBody
-} from '../styled'
-import candidate1 from '../../../assets/person/arun.png'
 import candidate2 from '../../../assets/person/aasif.png'
 import candidate3 from '../../../assets/person/ankit.png'
+import candidate1 from '../../../assets/person/arun.png'
+import { CandidateBody, CandidateHeading, CandidateXp } from '../styled'
 
 const CandidateTalk = [
   {
@@ -51,7 +44,7 @@ const CandidateTalk = [
   }
 ]
 const CandidateDiv = styled(Flex)`
-  min-width: 300px;
+  min-width: 350px;
   height: auto;
   padding: 10px 20px;
 `
@@ -72,7 +65,6 @@ function CandidateExp() {
           return (
             <CandidateDiv column justifyContentSpaceBetween key={i}>
               <CandidateXp>{content.review}</CandidateXp>
-
               <Flex justifyContentFlexStart alignItemsCenter p={4}>
                 <Flex>
                   {content.image ? (
@@ -81,9 +73,10 @@ function CandidateExp() {
                     <FaUserCircle style={{ fontSize: '30px' }} />
                   )}
                 </Flex>
-                <CandidateName alignItemsCenter>
-                  {content.author}, {content.position}
-                </CandidateName>
+                <Flex column style={{ margin: '0 15px' }}>
+                  <Label color={'#111'}>{content.author},</Label>
+                  <Span>{content.position}</Span>
+                </Flex>
               </Flex>
             </CandidateDiv>
           )

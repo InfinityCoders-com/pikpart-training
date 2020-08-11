@@ -203,8 +203,8 @@ export function FormSelect({
         value={value}
         className={className}
         style={{
-          // width: '100%',
           ...style.formElement,
+          background: '#fff',
           padding: '6px 11px',
           cursor: 'pointer',
           width: '100%'
@@ -217,58 +217,6 @@ export function FormSelect({
         {list.map((item: any, i: number) => (
           <option value={item.value || item.id} key={i}>
             {item.label || item.name}
-          </option>
-        ))}
-      </select>
-      {fieldErrors[name] && (
-        <Span p={2} style={{ color: '#e21515', height: '15px' }} variant="secondary">
-          {'*' + fieldErrors[name]}
-        </Span>
-      )}
-    </Form>
-  )
-}
-
-export function MyFormSelect({
-  list,
-  name,
-  label,
-  style = {},
-  value,
-  onBlur,
-  variant,
-  disabled,
-  onChange,
-  className,
-  placeholder,
-  fieldErrors
-}: IFormSelect) {
-  return (
-    <Form variant={variant} style={{ flexGrow: 1, margin: '5px 0px', ...style.container }}>
-      {label && (
-        <Span variant="secondary" style={{ ...style.label, paddingBottom: 5, fontSize: 12 }}>
-          {label}
-        </Span>
-      )}
-      <select
-        name={name}
-        value={value}
-        className={className}
-        style={{
-          // width: '100%',
-          ...style.formElement,
-          padding: '7px 11px',
-          cursor: 'pointer',
-          width: '90%'
-        }}
-        disabled={disabled}
-        onBlur={onBlur}
-        onChange={(e: any) => onChange && onChange(e.target)}
-      >
-        <option value={''}>{placeholder}</option>
-        {list.map((item: any, i: number) => (
-          <option value={item.id} key={i}>
-            {item.name}
           </option>
         ))}
       </select>

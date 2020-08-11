@@ -17,7 +17,7 @@ function Certificate() {
             margin: '0 auto'
           }}
         >
-          <img style={{ height: '150px', width: 'auto' }} src={basic} alt="logo" />
+          <img style={{ height: '100px', width: 'auto' }} src={basic} alt="logo" />
         </div>
         <CertificateName>Jump2Join Basic Certification</CertificateName>
         <CertificateDesc>
@@ -33,7 +33,7 @@ function Certificate() {
             margin: '0 auto'
           }}
         >
-          <img style={{ height: '150px', width: 'auto' }} src={advance} alt="logo" />
+          <img style={{ height: '100px', width: 'auto' }} src={advance} alt="logo" />
         </div>
         <CertificateName>Jump2Join Advance Certification</CertificateName>
         <CertificateDesc>
@@ -49,7 +49,7 @@ function Certificate() {
             margin: '0 auto'
           }}
         >
-          <img style={{ height: '150px', width: 'auto' }} src={expert} alt="logo" />
+          <img style={{ height: '100px', width: 'auto' }} src={expert} alt="logo" />
         </div>
         <CertificateName>Jump2Join Expert Certification</CertificateName>
         <CertificateDesc>

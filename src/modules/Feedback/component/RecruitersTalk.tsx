@@ -1,16 +1,10 @@
+import { Flex, Label, Span, styled } from '@icstark/ui'
 import React from 'react'
-import { Flex, styled } from '@icstark/ui'
-import { FaThumbsUp, FaUserCircle } from 'react-icons/fa'
-import {
-  RecruitContainer,
-  RecruitHeading,
-  RecruitBody,
-  CandidateXp,
-  CandidateName
-} from '../styled'
+import { FaUserCircle } from 'react-icons/fa'
+import recruter3 from '../../../assets/person/mayankAwasthi.png'
 import recruter1 from '../../../assets/person/praveshKumar.png'
 import recruter2 from '../../../assets/person/swetaGoel.png'
-import recruter3 from '../../../assets/person/mayankAwasthi.png'
+import { CandidateXp, RecruitBody, RecruitContainer, RecruitHeading } from '../styled'
 
 const recruiterTalk = [
   {
@@ -45,7 +39,7 @@ const RecruiterImage: any = styled.div`
   border: 1px solid #d3d3d3;
 `
 const RecruiterDiv: any = styled(Flex)`
-  min-width: 500px;
+  min-width: 400px;
   height: auto;
   padding: 10px 20px;
   @media (max-width: 540px) {
@@ -77,9 +71,10 @@ function RecruitersTalk() {
                     <FaUserCircle style={{ fontSize: '30px' }} />
                   )}
                 </Flex>
-                <CandidateName alignItemsCenter>
-                  {content.author}, {content.position}
-                </CandidateName>
+                <Flex column style={{ margin: '0 15px' }}>
+                  <Label color={'#111'}>{content.author},</Label>
+                  <Span>{content.position}</Span>
+                </Flex>
               </Flex>
             </RecruiterDiv>
           )

@@ -116,6 +116,7 @@ function TrainerForm() {
       <Modal
         variant="xl Left-Center"
         toggleModal={modal.show}
+        style={{ content: { minHeight: '90vh' } }}
         setToggleModal={() => setModal({ ...modal, show: false })}
       >
         <FormContainer>
@@ -129,15 +130,7 @@ function TrainerForm() {
             >
               Trainer Registration Form
             </div>
-            <Flex
-              style={{
-                margin: '10px 0px',
-                minHeight: '375px'
-              }}
-              wrap
-              justifyContentSpaceBetween
-              alignItemsCenter
-            >
+            <Flex style={{ margin: '10px 0px' }} wrap justifyContentSpaceBetween alignItemsCenter>
               <Flex width={[1, 0.47]}>
                 <FormInput
                   label="Full Name*"
