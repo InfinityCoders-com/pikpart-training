@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Span } from '@icstark/ui'
 import Papers from './Papers'
 import Card from './Card'
+import CertificateForm from '../../Application/component/CertificateForm'
 // import content from '../../../data.json'
 
 export const Paper = (a: any) => {

@@ -12,7 +12,7 @@ import {
 import candidate1 from '../../../assets/person/arun.png'
 import candidate2 from '../../../assets/person/aasif.png'
 import candidate3 from '../../../assets/person/ankit.png'
-// import video1 from '../../../assets/video/candidate/sujataGupta.mp4'
+
 const CandidateTalk = [
   {
     review:

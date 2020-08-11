@@ -33,7 +33,7 @@ export const TrustBrandContainer = styled(Flex)`
   width: 80%;
   overflow: auto;
   > div {
-    min-width: 20vw;
+    min-width: 13vw;
   }
   @media (max-width: 540px) {
     width: 100%;
@@ -105,6 +105,7 @@ export const CandidateName = styled(Flex)`
   margin: 0px 15px;
   font-size: 12px;
   color: #676767;
+  font-weight: 600;
 `
 export const CandidateReactContainer = styled(Flex)`
   justify-content: space-between;

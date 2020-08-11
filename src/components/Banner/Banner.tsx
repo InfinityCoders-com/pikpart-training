@@ -11,6 +11,10 @@ const banners = [{ pic: training }, { pic: job }, { pic: recruitment }]
 const TestimonialWraper = styled(Flex)`
   overflow: hidden;
   // margin-bottom: 50px;
+  height: 425px;
+  @media (max-width: 1200px) {
+    height: auto;
+  }
   button {
     display: block;
     border: none;
@@ -33,6 +37,9 @@ const LeftButton = styled.button`
   z-index: 1;
   font-size: 40px;
   // padding-left: 10px;
+  &:hover {
+    color: #727272;
+  }
   @media (max-width: 540px) {
     font-size: 20px;
   }
@@ -44,6 +51,9 @@ const RightButton = styled.button`
   z-index: 1;
   font-size: 40px;
   // padding-right: 100px;
+  &:hover {
+    color: #727272;
+  }
   @media (max-width: 540px) {
     font-size: 20px;
     left: 92vw;

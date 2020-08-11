@@ -63,7 +63,7 @@ function Header(props: any) {
     <Flex justifyContentSpaceBetween alignItemsCenter>
       <Flex alignItemsCenter>
         <Link to="/">
-          <img style={{ height: 30, width: 'auto' }} src={jump2join} alt="logo" />
+          <img style={{ height: 40, width: 'auto' }} src={jump2join} alt="logo" />
         </Link>
       </Flex>
       <Flex>

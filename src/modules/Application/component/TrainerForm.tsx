@@ -103,12 +103,12 @@ function TrainerForm() {
         column
         alignItemsCenter
         style={{ cursor: 'pointer' }}
-        // onClick={() =>
-        //   setModal({
-        //     ...modal,
-        //     show: true
-        //   })
-        // }
+        onClick={() =>
+          setModal({
+            ...modal,
+            show: true
+          })
+        }
       >
         <FaUserTie style={{ fontSize: '60px', marginBottom: '20px', color: '#727272' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>Apply For Trainer</div>
@@ -131,7 +131,8 @@ function TrainerForm() {
             </div>
             <Flex
               style={{
-                margin: '10px 0px'
+                margin: '10px 0px',
+                minHeight: '375px'
               }}
               wrap
               justifyContentSpaceBetween
