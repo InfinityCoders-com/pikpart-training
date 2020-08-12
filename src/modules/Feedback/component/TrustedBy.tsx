@@ -20,7 +20,7 @@ function TrustedBy() {
           <img
             src={pikpart}
             alt="pikpart"
-            style={{ height: '40px', width: 'auto', margin: '30px 20px' }}
+            style={{ height: '30px', width: 'auto', margin: '30px 20px' }}
           />
         </div>
         <div>

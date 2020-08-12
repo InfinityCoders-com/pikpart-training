@@ -15,10 +15,10 @@ export const CertificateDesc = styled.div`
   text-align: justify;
 `
 export const CertificateContainer = styled(Flex)`
-  justify-content: space-aroud;
+  justify-content: space-around;
   align-items: center;
   width: 90%;
-  margin: 4vmax auto;
+  margin: 1vmax auto;
   @media (max-width: 540px) {
     justify-content: center;
     flex-direction: column;

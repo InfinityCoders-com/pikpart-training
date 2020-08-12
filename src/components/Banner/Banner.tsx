@@ -1,16 +1,16 @@
+import { Flex, styled } from '@icstark/ui'
 import React from 'react'
-import { styled, Flex, Span } from '@icstark/ui'
-// import banner from '../../assets/banner.jpg'
-import training from '../../assets/banner/training.jpg'
+import { FaAngleLeft, FaAngleRight, FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import job from '../../assets/banner/job.jpg'
 import recruitment from '../../assets/banner/recruitment.jpg'
-import { FaAngleLeft, FaAngleRight, FaPencilAlt } from 'react-icons/fa'
+// import banner from '../../assets/banner.jpg'
+import training from '../../assets/banner/training.jpg'
 
 const banners = [{ pic: training }, { pic: job }, { pic: recruitment }]
 
-const TestimonialWraper = styled(Flex)`
+const TestimonialWrapper = styled(Flex)`
   overflow: hidden;
-  // margin-bottom: 50px;
+  height: 50vh;
   button {
     display: block;
     border: none;
@@ -19,20 +19,23 @@ const TestimonialWraper = styled(Flex)`
     cursor: pointer;
   }
 `
-const TestimonialSlide = styled(Flex)`
-  // width: 65vw;
+const TestimonialSlide: any = styled(Flex)`
   width: 100vw;
   float: left;
   flex-direction: row;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: ${(props: any) => `url(${props.back})`};
 `
 const LeftButton = styled.button`
   position: absolute;
-  left: 2px;
-  // left: 0px;
+  // left: 2px;
+  left: 1vw;
   top: 40%;
   z-index: 1;
-  font-size: 40px;
-  // padding-left: 10px;
+  font-size: 30px;
+  color: #727272;
   @media (max-width: 540px) {
     font-size: 20px;
   }
@@ -42,8 +45,8 @@ const RightButton = styled.button`
   left: 94vw;
   top: 40%;
   z-index: 1;
-  font-size: 40px;
-  // padding-right: 100px;
+  font-size: 30px;
+  color: #727272;
   @media (max-width: 540px) {
     font-size: 20px;
     left: 92vw;
@@ -57,13 +60,14 @@ function Banner({ title, des }: any) {
   const [next, setNext] = React.useState(0)
   return (
     <Flex justifyContentCenter alignItemsCenter>
-      <TestimonialWraper justifyContentCenter width={[1]} style={{ position: 'relative' }}>
+      <TestimonialWrapper justifyContentCenter width={[1]} style={{ position: 'relative' }}>
         <LeftButton onClick={(e) => next > 0 && setNext(next - 1)}>
-          <FaAngleLeft />
+          <FaArrowCircleLeft />
         </LeftButton>
         <Flex
           style={{
             width: '100%',
+            height: '100%',
             overflow: 'hidden'
           }}
         >
@@ -71,22 +75,19 @@ function Banner({ title, des }: any) {
             style={{
               marginLeft: `-${next * 100}vw`,
               transition: '1s ease',
+              height: '100%',
               width: 'auto'
             }}
           >
             {banners.map((content: any, i: number, data: any) => {
-              return (
-                <TestimonialSlide key={i}>
-                  <img src={content.pic} alt="banner" style={{ width: '100%', height: 'auto' }} />
-                </TestimonialSlide>
-              )
+              return <TestimonialSlide back={content.pic} key={i} />
             })}
           </Flex>
         </Flex>
         <RightButton onClick={(e) => next < Math.floor(banners.length - 1) && setNext(next + 1)}>
-          <FaAngleRight />
+          <FaArrowCircleRight />
         </RightButton>
-      </TestimonialWraper>
+      </TestimonialWrapper>
     </Flex>
   )
 }

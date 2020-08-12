@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -11,9 +11,9 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -35,8 +35,8 @@
   to {
     transform: rotate(360deg);
   }
-}
-label {
+} */
+/* label {
   display: inline-block;
   position: absolute;
   left: 25px;
@@ -44,8 +44,8 @@ label {
   transform: translate(25px, -50%);
   transition: all 150ms ease-in;
   color: #676767;
-}
-label.textarea {
+} */
+/* label.textarea {
   display: inline-block;
   position: absolute;
   left: 25px;
@@ -57,4 +57,4 @@ label.textarea {
 
 .my-select.option:first-child {
   color: red;
-}
+} */

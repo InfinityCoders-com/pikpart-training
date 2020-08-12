@@ -3,7 +3,7 @@ import { Flex, Span, Button } from '@icstark/ui'
 import { Modal } from '@icstark/ui'
 import { FormInput, FormSelect } from '../../../components/Forms/Form'
 import { FaUser, FaUserTie } from 'react-icons/fa'
-import { FormContainer } from './CertificateForm'
+import { FormContainer, AvatarContainer } from './CertificateForm'
 function TrainerForm() {
   const [modal, setModal] = React.useState({
     show: false
@@ -99,23 +99,23 @@ function TrainerForm() {
     form.values.Expertise
   return (
     <>
-      <Flex
+      <AvatarContainer
         column
         alignItemsCenter
-        style={{ cursor: 'pointer' }}
-        // onClick={() =>
-        //   setModal({
-        //     ...modal,
-        //     show: true
-        //   })
-        // }
+        onClick={() =>
+          setModal({
+            ...modal,
+            show: true
+          })
+        }
       >
         <FaUserTie style={{ fontSize: '60px', marginBottom: '20px', color: '#727272' }} />
         <div style={{ fontWeight: 500, color: '#676767', fontSize: '14px' }}>Apply For Trainer</div>
-      </Flex>
+      </AvatarContainer>
       <Modal
         variant="xl Left-Center"
         toggleModal={modal.show}
+        style={{ content: { minHeight: '75vh' } }}
         setToggleModal={() => setModal({ ...modal, show: false })}
       >
         <FormContainer>
@@ -129,14 +129,7 @@ function TrainerForm() {
             >
               Trainer Registration Form
             </div>
-            <Flex
-              style={{
-                margin: '10px 0px'
-              }}
-              wrap
-              justifyContentSpaceBetween
-              alignItemsCenter
-            >
+            <Flex style={{ margin: '10px 0px' }} wrap justifyContentSpaceBetween alignItemsCenter>
               <Flex width={[1, 0.47]}>
                 <FormInput
                   label="Full Name*"
@@ -186,7 +179,7 @@ function TrainerForm() {
                   // onBlur={onBlur}
                   value={form.values['Address']}
                   fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                  style={{ formElement: { fontSize: '12px', fontWeight: 400 } }}
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
@@ -306,7 +299,7 @@ function TrainerForm() {
                   // onBlur={onBlur}
                   value={form.values['Expertise']}
                   fieldErrors={form.errors}
-                  style={{ formElement: { fontSize: '12px', fontWeight: 200 } }}
+                  style={{ formElement: { fontSize: '12px', fontWeight: 400 } }}
                 />
               </Flex>
               <Flex width={[1, 0.47]}>
