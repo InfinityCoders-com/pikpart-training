@@ -25,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "rm -rf build/* && npm run build && cp build/index.html build/200.html && surge build/ jump2join.surge.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
