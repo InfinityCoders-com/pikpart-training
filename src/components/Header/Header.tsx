@@ -77,9 +77,6 @@ function Header(props: any) {
           <HeadingLink to={RoutesPath.Courses}>Courses</HeadingLink>
         </HeadingFlex>
         <HeadingFlex>
-          <HeadingLink to={RoutesPath.AboutUs}>About Us</HeadingLink>
-        </HeadingFlex>
-        <HeadingFlex>
           <HeadingLink to="#" onClick={() => setModal(true)}>
             Contact Us
           </HeadingLink>

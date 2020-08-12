@@ -28,12 +28,15 @@ function Footer() {
   return (
     <Flex style={{ margin: 0 }}>
       <FooterContainer>
-        <Flex style={{ margin: '20px 0px' }}>
+        {/* <Flex style={{ margin: '20px 0px' }}>
           <Link to="/">
             <img src={jump2join} style={{ height: 50, width: 'auto' }} alt="companyLogo" />
           </Link>
+        </Flex> */}
+        <Flex style={{ margin: '5px 0px', fontSize: '12px' }}>
+          © Copyright Jump2Join 2020. All rights reserved
         </Flex>
-        <Flex style={{ margin: '20px 0px' }}>
+        <Flex style={{ margin: '5px 0px' }}>
           <a
             href="https://www.facebook.com/Jump2Join/"
             target="_blank"
@@ -71,16 +74,11 @@ function Footer() {
           </a>
         </Flex>
         {/* <Flex style={{ margin: '20px 0px' }}>
-          <ContactUsDiv>
-            <ContactUs />
-          </ContactUsDiv>
-        </Flex> */}
-        <Flex style={{ margin: '20px 0px' }}>
           <FooterLink to="#" onClick={() => setModal(true)}>
             Contact Us
           </FooterLink>
         </Flex>
-        <ContactUs setModal={setModal} modal={modal} />
+        <ContactUs setModal={setModal} modal={modal} /> */}
       </FooterContainer>
     </Flex>
   )
