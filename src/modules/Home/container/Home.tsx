@@ -30,11 +30,20 @@ function Home() {
           padding: '3px 0px'
         }}
       >
-        <Application />
+        <AboutUs />
       </div>
       <div
         style={{
           background: 'linear-gradient(to bottom,#eee, #fff)',
+          // background: 'linear-gradient(to bottom,#fff -30%, #1890ff 128%)',
+          padding: '3px 0px'
+        }}
+      >
+        <Application />
+      </div>
+      <div
+        style={{
+          background: 'linear-gradient(to bottom,#fff, #eee)',
           // background: 'linear-gradient(to bottom,#1890ff -18%, #fff 95%)',
           padding: '5px 0px'
         }}

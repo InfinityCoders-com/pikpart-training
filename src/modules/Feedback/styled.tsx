@@ -21,8 +21,9 @@ export const TrustedContainer = styled(Flex)`
 export const TrustedHeading = styled.div`
   padding-top: 7px;
   width: 15%;
-  font-weight: 500;
-  color: #676767;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
   @media (max-width: 540px) {
     width: 100%;
     text-align: center;
@@ -66,6 +67,8 @@ export const RecruitHeading = styled.div`
   width: 15%;
   font-weight: 600;
   color: #444;
+  text-align: center;
+
   @media (max-width: 540px) {
     width: 100%;
     text-align: center;
@@ -89,8 +92,8 @@ export const RecruitBody = styled(Flex)`
   }
 `
 export const CandidateHeading = styled.div`
-  font-weight: 500;
-  color: #676767;
+  font-weight: 600;
+  color: #444;
   text-align: center;
   margin: 4vmax auto;
 `

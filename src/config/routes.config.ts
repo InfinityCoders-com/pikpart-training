@@ -1,7 +1,7 @@
 import { ForgotPassword, Login, LoginMobileOTP, Register } from '../modules/Auth'
 import Logout from '../modules/Auth/containers/Logout'
 import Home from '../modules/Home/container/Home'
-import AboutUs from '../modules/AboutUs/container/AboutUs'
+
 // import CourseContent from '../modules/CourseContent'
 import Userprofile from '../modules/User/containers/UserProfile'
 import Courses from '../modules/Courses/container/Courses'
@@ -19,7 +19,7 @@ export const RoutesPath = {
   Registration: '/registration',
   Logout: '/logout',
   ForgotPassword: '/forgot-password',
-  AboutUs: '/aboutUs',
+
   Courses: '/courses',
   CourseContent: '/course-content',
   // UserProfile: '/userProfile'
@@ -99,18 +99,7 @@ export const routesConfig: any = [
     link: '/',
     path: '/'
   },
-  {
-    authenticated: false,
-    bLabel: '',
-    children: undefined,
-    component: AboutUs,
-    exact: true,
-    icon: undefined,
-    label: '',
-    layout: ['header', 'footer'],
-    link: RoutesPath.AboutUs,
-    path: RoutesPath.AboutUs
-  },
+
   // {
   //   authenticated: false,
   //   bLabel: '',

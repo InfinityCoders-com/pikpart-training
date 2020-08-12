@@ -7,7 +7,7 @@ const ASpan = styled(Span)`
 
   padding-bottom: 20px;
   color: #727272;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.3px;
 
   text-align: justify;
@@ -18,7 +18,8 @@ export const H2Heading = styled.h2`
   margin: 40px 0;
   position: relative;
   user-select: none;
-  color: ${(props: any) => props.theme.colors.primary};
+  // color: ${(props: any) => props.theme.colors.primary};
+  color:#444;
 `
 export const Section = styled.section`
   width: 100%;
@@ -30,7 +31,7 @@ function AboutUs() {
   return (
     <Section>
       <H2Heading>About Us</H2Heading>
-      <Flex justifyContentCenter alignItemsCenter column width={0.6} style={{ margin: '0 auto' }}>
+      <Flex justifyContentCenter alignItemsCenter column width={0.85} style={{ margin: '0 auto' }}>
         <ASpan>{data.aboutUs}</ASpan>
       </Flex>
     </Section>
